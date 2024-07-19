@@ -144,12 +144,12 @@ main {
   flex-direction: column;
   gap: 15px;
   padding: 0 0 0 15px;
+  margin-bottom: 50px;
 }
 
-.choose-set-div p {
+.choose-set-div h2 {
   font-size: 16px;
   color: #141719;
-  font-weight: bold;
 }
 
 .set-image {
@@ -163,4 +163,105 @@ main {
 .set-image-div {
   display: flex;
   gap: 15px;
+}
+
+.number-div {
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px;
+  gap: 15px;
+  margin-bottom: 70px;
+}
+
+.number-inside-div {
+  padding: 20px 25px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.number {
+  font-size: 36px;
+  font-weight: bold;
+  color: #141719;
+  margin-bottom: 20px;
+}
+
+.number-text {
+  font-size: 16px;
+  color: #555f62;
+}
+
+.offers-div {
+  padding: 0 15px;
+}
+
+.offers-text-div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.offers-div h2 {
+  font-size: 16px;
+  color: #141719;
+}
+
+.offers-div a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: #182cc0;
+}
+
+.offers-inside-div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid #d8d8d8;
+}
+
+.offers-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  margin-bottom: 15px;
+}
+
+.offers-inside-text-div {
+  padding: 0 15px;
+}
+
+.offers-inside-text-div div {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  color: #6f787b;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.offers-inside-text-div h3 {
+  margin-bottom: 40px;
+  font-size: 16px;
+  color: #141719;
+  line-height: 30px;
+}
+
+.small-image-div {
+  position: absolute;
+  width: 80px;
+  height: 50px;
+  background-color: white;
+  z-index: 1;
+  right: -1%;
+  top: 5%;
+  background-image: url("images/tegeta-small.png");
+  background-size: cover;
+  border-radius: 5px;
 }
