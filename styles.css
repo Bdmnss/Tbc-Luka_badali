@@ -80,6 +80,7 @@ main {
   justify-content: center;
   text-align: center;
   color: white;
+  margin-bottom: 100px;
 }
 
 .hero-block::before {
@@ -129,4 +130,37 @@ main {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.subscribe-tbc-text-div {
+  padding: 0 15px;
+  color: #141719;
+  font-size: 28px;
+  margin-bottom: 70px;
+}
+
+.choose-set-div {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0 0 0 15px;
+}
+
+.choose-set-div p {
+  font-size: 16px;
+  color: #141719;
+  font-weight: bold;
+}
+
+.set-image {
+  width: 80%;
+  height: 230px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  border-radius: 10px;
+}
+
+.set-image-div {
+  display: flex;
+  gap: 15px;
 }
