@@ -9,6 +9,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 20px 15px;
+  width: 100%;
 }
 
 .header-tools-div {
@@ -140,6 +141,7 @@ main {
 }
 
 .choose-set-div {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -158,11 +160,49 @@ main {
   object-fit: cover;
   object-position: 50% 50%;
   border-radius: 10px;
+  z-index: 0;
 }
 
-.set-image-div {
+.set-image-container {
+  position: relative;
   display: flex;
   gap: 15px;
+}
+
+.set-image-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.set-image-inside-div {
+  position: absolute;
+  top: 65%;
+  left: 12%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 2;
+}
+
+.set-image-inside-div h3 {
+  font-size: 18px;
+  color: white;
+  z-index: 2;
+}
+
+.set-image-inside-div a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: white;
 }
 
 .number-div {
