@@ -346,6 +346,7 @@ main {
 .digital-bank-div {
   padding: 20px 15px;
   background-color: white;
+  margin-bottom: 100px;
 }
 
 .digital-bank-div h2 {
@@ -386,4 +387,66 @@ main {
   border-radius: 5px;
   cursor: pointer;
   font-weight: 600;
+}
+
+/* ********************* */
+/* პროდუქტების სტილები */
+/* ******************* */
+
+.products-div {
+  padding: 0 15px;
+  margin-bottom: 70px;
+}
+
+.products-div h2 {
+  font-size: 16px;
+  color: #141719;
+  margin-bottom: 20px;
+}
+
+.products-div a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: #182cc0;
+}
+
+.products-inside-div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid #d8d8d8;
+}
+
+.products-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  margin-bottom: 15px;
+}
+
+.products-text-div {
+  padding: 0 15px;
+}
+
+.products-text-div h3 {
+  font-size: 16px;
+  color: #141719;
+  margin-bottom: 20px;
+}
+
+.products-text-div p {
+  font-size: 14px;
+  color: #555f62;
+  line-height: 25px;
+  margin-bottom: 20px;
+}
+
+.products-text-div p > span {
+  font-weight: bold;
 }
