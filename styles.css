@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 15px;
+}
+
+.header-tools-div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-tools-div a {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #182cc0;
+  text-decoration: none;
+  gap: 4px;
+}
+
+.burger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20px;
+  height: 15px;
+  z-index: 20;
+}
+
+.burger-icon > div {
+  width: 50%;
+  height: 2px;
+  background-color: #555f62;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.burger-icon > div:nth-child(2) {
+  width: 100%;
+}
+
+.burger-icon > div:last-child {
+  width: 70%;
+  height: 2px;
+  background-color: #555f62;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+main {
+  padding: 15px 0;
+  background-color: #f9fafa;
+}
+
+.left-arrow {
+  width: 15px;
+}
+
+.navigate-main-div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  color: #141719;
+  margin-bottom: 40px;
+  padding: 0 15px;
+}
+
+.hero-block {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 360px;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.hero-data {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-top: 160px;
+  gap: 15px;
+  padding: 0 15px;
+}
+
+.hero-data h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.hero-data button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 15px 20px;
+  background-color: #182cc0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
