@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+/* ***************** */
+/* ჰედერის სტილები */
+/* *************** */
+
 header {
   display: flex;
   align-items: center;
@@ -61,6 +65,10 @@ main {
   background-color: #f9fafa;
 }
 
+/* ************************ */
+/* მთავარი ტექსტის სტილები */
+/* ********************** */
+
 .left-arrow {
   width: 15px;
 }
@@ -75,6 +83,10 @@ main {
   padding: 0 15px;
 }
 
+/* ************************* */
+/* მთავარი სურათის სტილები */
+/* *********************** */
+
 .hero-block {
   position: relative;
   display: flex;
@@ -82,6 +94,10 @@ main {
   text-align: center;
   color: white;
   margin-bottom: 100px;
+}
+
+.hero-block a {
+  text-decoration: none;
 }
 
 .hero-block::before {
@@ -133,12 +149,20 @@ main {
   cursor: pointer;
 }
 
+/* *************************** */
+/* გამოიწერეთ ტექსტის სტილები */
+/* ************************* */
+
 .subscribe-tbc-text-div {
   padding: 0 15px;
   color: #141719;
   font-size: 28px;
   margin-bottom: 70px;
 }
+
+/* ************************** */
+/* შეარჩიეთ ნაკრების სტილები */
+/* ************************ */
 
 .choose-set-div {
   position: relative;
@@ -205,6 +229,10 @@ main {
   color: white;
 }
 
+/* ******************** */
+/* სტატისტიკის სტილები */
+/* ****************** */
+
 .number-div {
   display: flex;
   flex-direction: column;
@@ -232,8 +260,13 @@ main {
   color: #555f62;
 }
 
+/* ********************* */
+/* შეთავაზებების სტილები */
+/* ******************* */
+
 .offers-div {
   padding: 0 15px;
+  margin-bottom: 70px;
 }
 
 .offers-text-div {
@@ -304,4 +337,53 @@ main {
   background-image: url("images/tegeta-small.png");
   background-size: cover;
   border-radius: 5px;
+}
+
+/* ************************ */
+/* ციფრული ბანკის სტილები */
+/* ********************** */
+
+.digital-bank-div {
+  padding: 20px 15px;
+  background-color: white;
+}
+
+.digital-bank-div h2 {
+  font-size: 16px;
+  color: #141719;
+  margin-bottom: 20px;
+}
+
+.mobile-image-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  margin-bottom: 20px;
+}
+
+.digital-bank-div p {
+  font-size: 16px;
+  color: #555f62;
+  line-height: 25px;
+  margin-bottom: 20px;
+}
+
+.digital-bank-div a {
+  text-decoration: none;
+}
+
+.download-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 15px 20px;
+  background-color: white;
+  color: #182cc0;
+  border: 1px solid #182cc0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
 }
