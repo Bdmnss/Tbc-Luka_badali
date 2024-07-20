@@ -451,3 +451,41 @@ main {
 .products-text-div p > span {
   font-weight: bold;
 }
+
+/* ******************* */
+/* ჯილდოების სტილები */
+/* ***************** */
+
+.reward-div {
+  padding: 0 15px;
+  margin-bottom: 70px;
+}
+
+.reward-div h2 {
+  font-size: 16px;
+  color: #141719;
+  margin-bottom: 20px;
+}
+
+.reward-inside-div {
+  width: 85%;
+  background-color: white;
+  padding: 25px;
+}
+
+.reward-inside-div img {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.reward-inside-div h3 {
+  font-size: 17px;
+  color: #141719;
+  margin-bottom: 20px;
+  line-height: 35px;
+}
+
+.reward-inside-div p {
+  font-size: 16px;
+  color: #555f62;
+}
