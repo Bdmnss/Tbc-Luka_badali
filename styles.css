@@ -16,6 +16,28 @@ header {
   width: 100%;
 }
 
+.search-icon {
+  fill: #555f62;
+  transition: fill 0.5s ease;
+}
+
+.search-icon:hover {
+  fill: #007aff;
+}
+
+.arrow-icon {
+  fill: #182cc0;
+  transition: fill 0.5s ease;
+}
+
+.header-arrow-group:hover .arrow-icon {
+  fill: #007aff;
+}
+
+.header-arrow-group:hover {
+  color: #007aff;
+}
+
 .header-tools-div {
   display: flex;
   align-items: center;
@@ -30,6 +52,7 @@ header {
   color: #182cc0;
   text-decoration: none;
   gap: 4px;
+  transition: color 0.5s ease;
 }
 
 .burger-icon {
@@ -148,6 +171,11 @@ main {
   border-radius: 5px;
   cursor: pointer;
   font-weight: 600;
+  transition: background-color 0.5s ease;
+}
+
+.hero-data button:hover {
+  background-color: #007aff;
 }
 
 /* *************************** */
@@ -180,18 +208,25 @@ main {
 }
 
 .set-image {
-  width: 80%;
+  width: 100%;
   height: 230px;
   object-fit: cover;
   object-position: 50% 50%;
-  border-radius: 10px;
   z-index: 0;
+  transition: transform 0.5s ease;
+}
+
+.set-image-container:hover img {
+  transform: scale(1.1);
 }
 
 .set-image-container {
   position: relative;
   display: flex;
   gap: 15px;
+  overflow: hidden;
+  width: 80%;
+  border-radius: 10px;
 }
 
 .set-image-container::before {
@@ -199,7 +234,7 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  width: 80%;
+  width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 10px;
@@ -276,6 +311,11 @@ main {
   margin-bottom: 20px;
 }
 
+.offers-arrow {
+  fill: #182cc0;
+  transition: fill 0.5s ease;
+}
+
 .offers-div h2 {
   font-size: 16px;
   color: #141719;
@@ -287,16 +327,39 @@ main {
   gap: 5px;
   text-decoration: none;
   color: #182cc0;
+  overflow: hidden;
+  transition: color 0.5s ease;
+}
+
+.offers-div a:hover {
+  color: #007aff;
+}
+
+.offers-div a:hover .offers-arrow {
+  fill: #007aff;
+}
+
+.offers-main-div {
+  width: 80%;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid #d8d8d8;
+  transition: box-shadow 0.5s ease;
+}
+
+.offers-main-div:hover img {
+  transform: scale(1.1);
+}
+
+.offers-main-div:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .offers-inside-div {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 85%;
-  border-radius: 5px;
-  overflow: hidden;
-  border: 1px solid #d8d8d8;
+  width: 100%;
 }
 
 .offers-image {
@@ -305,6 +368,7 @@ main {
   object-fit: cover;
   object-position: 50% 50%;
   margin-bottom: 15px;
+  transition: transform 0.5s ease;
 }
 
 .offers-inside-text-div {
@@ -405,6 +469,22 @@ main {
   margin-bottom: 20px;
 }
 
+.products-main-div {
+  width: 80%;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid #d8d8d8;
+  transition: box-shadow 0.5s ease;
+}
+
+.products-main-div:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.products-main-div:hover img {
+  transform: scale(1.1);
+}
+
 .products-div a {
   display: flex;
   align-items: center;
@@ -417,10 +497,7 @@ main {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 85%;
-  border-radius: 5px;
-  overflow: hidden;
-  border: 1px solid #d8d8d8;
+  width: 100%;
 }
 
 .products-image {
@@ -429,6 +506,7 @@ main {
   object-fit: cover;
   object-position: 50% 50%;
   margin-bottom: 15px;
+  transition: transform 0.5s ease;
 }
 
 .products-text-div {
@@ -471,6 +549,11 @@ main {
   width: 85%;
   background-color: white;
   padding: 25px;
+  transition: box-shadow 0.5s ease;
+}
+
+.reward-inside-div:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .reward-inside-div img {
@@ -517,8 +600,13 @@ footer {
   align-items: center;
   gap: 5px;
   margin-bottom: 10px;
-  background-color: #f9fafa;
   padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.language-div > div:nth-child(1):hover {
+  background-color: #f9fafa;
 }
 
 .language-div > div:last-child {
@@ -538,17 +626,29 @@ footer {
   color: #141719;
 }
 
-.footer-arrow-div div {
+.footer-arrow-div-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.footer-arrow-div-content {
   display: none;
   /* display: flex;
   flex-direction: column; */
 }
 
-.footer-arrow-div div > a {
+.footer-arrow-div-content a {
   text-decoration: none;
   color: #555f62;
   font-size: 16px;
   margin-top: 20px;
+  transition: color 0.5s ease;
+}
+
+.footer-arrow-div-content a:hover {
+  color: #182cc0;
 }
 
 .contact-div {
@@ -573,6 +673,10 @@ footer {
   font-weight: bold;
 }
 
+.contact-div a:hover {
+  text-decoration: underline;
+}
+
 .social-networks-div {
   padding: 20px 20px;
   margin-bottom: 20px;
@@ -591,11 +695,22 @@ footer {
 
 .social-svg {
   fill: #555f62;
+  transition: fill 0.5s ease;
 }
 
 .social-btn {
   border: none;
   padding: 15px 15px;
+  border-radius: 5px;
+  transition: background-color 0.5s ease;
+}
+
+.social-btn:hover {
+  background-color: #d8d8d8;
+}
+
+.social-btn:hover .social-svg {
+  fill: #182cc0;
 }
 
 .rules-div {
@@ -612,6 +727,12 @@ footer {
 .rules-text-div p {
   font-size: 16px;
   color: #555f62;
+  cursor: pointer;
+  transition: color 0.5s ease;
+}
+
+.rules-text-div p:hover {
+  color: #182cc0;
 }
 
 .rules-div p {
