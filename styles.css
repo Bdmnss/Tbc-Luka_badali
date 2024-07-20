@@ -489,3 +489,135 @@ main {
   font-size: 16px;
   color: #555f62;
 }
+
+/* ***************** */
+/* ფუტერის სტილები */
+/* *************** */
+
+footer {
+  background-color: white;
+}
+
+.logo-language-div {
+  padding: 30px 20px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.language-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.language-div > div:nth-child(1) {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+  background-color: #f9fafa;
+  padding: 5px 10px;
+}
+
+.language-div > div:last-child {
+  display: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 15px 20px;
+  font-weight: bold;
+}
+
+.footer-arrow-div {
+  padding: 30px 20px;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.footer-arrow-div h3 {
+  font-size: 18px;
+  color: #141719;
+}
+
+.footer-arrow-div div {
+  display: none;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.footer-arrow-div div > a {
+  text-decoration: none;
+  color: #555f62;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.contact-div {
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact-div h3 {
+  font-size: 18px;
+  color: #141719;
+}
+
+.contact-div a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 10px;
+  font-size: 16px;
+  color: #555f62;
+  font-weight: bold;
+}
+
+.social-networks-div {
+  padding: 20px 20px;
+  margin-bottom: 20px;
+}
+
+.social-networks-div h3 {
+  font-size: 18px;
+  color: #141719;
+  margin-bottom: 20px;
+}
+
+.social-networks-div div {
+  display: flex;
+  gap: 15px;
+}
+
+.social-svg {
+  fill: #555f62;
+}
+
+.social-btn {
+  border: none;
+  padding: 15px 15px;
+}
+
+.rules-div {
+  padding: 20px 20px;
+  background-color: #f9fafa;
+}
+
+.rules-text-div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.rules-text-div p {
+  font-size: 16px;
+  color: #555f62;
+}
+
+.rules-div p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  color: #6f787b;
+}
