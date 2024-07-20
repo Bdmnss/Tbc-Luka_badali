@@ -23,16 +23,33 @@ window.addEventListener("scroll", function () {
 });
 
 burgerIcon.addEventListener("click", function () {
-  main.classList.toggle("isMenuOpen");
-  footer.classList.toggle("isMenuOpen");
-  isMenuOpen = !isMenuOpen;
-
-  if (isMenuOpen) {
-    burgerMenu.classList.remove("isMenuOpen");
+  if (burgerMenu.style.display === "none" || burgerMenu.style.display === "") {
+    showElementWithTransition(burgerMenu);
+    hideElementWithTransition(main);
+    hideElementWithTransition(footer);
     burgerIcon.classList.add("closeIcon");
     header.style.backgroundColor = "#f9fafa";
   } else {
-    burgerMenu.classList.add("isMenuOpen");
+    hideElementWithTransition(burgerMenu);
+    showElementWithTransition(main);
+    showElementWithTransition(footer);
     burgerIcon.classList.remove("closeIcon");
+    header.style.backgroundColor = "#fff";
   }
 });
+
+function showElementWithTransition(element) {
+  element.style.display = "block";
+  setTimeout(() => {
+    element.classList.remove("hide-element");
+    element.classList.add("show-element");
+  }, 10);
+}
+
+function hideElementWithTransition(element) {
+  element.classList.remove("show-element");
+  element.classList.add("hide-element");
+  setTimeout(() => {
+    element.style.display = "none";
+  }, 10);
+}
