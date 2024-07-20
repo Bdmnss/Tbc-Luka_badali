@@ -22,6 +22,10 @@ header {
   transition: 0.2s;
 }
 
+.isMenuOpen {
+  display: none;
+}
+
 header.isHeaderHidden {
   transform: translateY(-100%);
 }
@@ -93,6 +97,108 @@ header.isHeaderHidden {
   border-radius: 5px;
   transition: 0.3s;
 }
+
+.burger-icon.closeIcon > div:nth-child(1) {
+  position: relative;
+  transform: rotate(45deg);
+  left: 2px;
+  top: 3px;
+}
+
+.burger-icon.closeIcon > div:last-child {
+  position: relative;
+  transform: translateX(111%) rotate(45deg);
+  width: 50%;
+  right: 2px;
+  bottom: 3px;
+}
+
+.burger-icon.closeIcon > div:nth-child(2) {
+  width: 100%;
+  transform: rotate(-45deg);
+}
+
+.close-icon {
+  display: flex;
+  padding-top: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 22px;
+  height: 32px;
+  position: relative;
+  left: 100%;
+  transform: translateX(-100%);
+}
+
+.close-icon > div {
+  width: 100%;
+  height: 4px;
+  background-color: #aaaaaa;
+  border-radius: 5px;
+}
+
+.close-icon > div:first-child {
+  position: relative;
+  top: 50%;
+  transform: rotate(45deg);
+}
+
+.close-icon > div:last-child {
+  position: relative;
+  bottom: 39%;
+  transform: rotate(-45deg);
+}
+
+.burger-arrow-div {
+  padding: 30px 20px 15px 20px;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.burger-arrow-div-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.burger-arrow-div-content {
+  display: none;
+  /* display: flex;
+  flex-direction: column;
+  gap: 15px; */
+}
+
+.burger-arrow-div-content a {
+  text-decoration: none;
+  color: #555f62;
+  font-size: 18px;
+}
+
+.rules-burger-div {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px 70px 20px;
+  background-color: #f9fafa;
+}
+
+.rules-burger-text-div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  color: #555f62;
+  font-size: 14px;
+}
+
+.rules-burger-div p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: #555f62;
+}
+
 main {
   padding: 15px 0;
   background-color: #f9fafa;
