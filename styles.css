@@ -170,22 +170,6 @@ header.isHeaderHidden {
   border-bottom: 1px solid #d8d8d8;
 }
 
-.burger-arrow-div-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-.burger-arrow-div-content {
-  display: none;
-  /* display: flex;
-  flex-direction: column;
-  gap: 15px; */
-}
-
 .burger-arrow-div-content a {
   text-decoration: none;
   color: #555f62;
@@ -766,9 +750,13 @@ footer {
 }
 
 .footer-arrow-div-content {
-  display: none;
-  /* display: flex;
-  flex-direction: column; */
+  display: grid;
+  grid-template-rows: auto;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: max-height 1s, opacity 1s ease-in-out, visibility 0s linear 1s;
 }
 
 .footer-arrow-div-content a {
@@ -781,6 +769,21 @@ footer {
 
 .footer-arrow-div-content a:hover {
   color: #182cc0;
+}
+
+.arrow {
+  transition: transform 1s ease;
+}
+
+.arrow.isExpanded {
+  transform: rotate(180deg);
+}
+
+.footer-arrow-div-content.isExpanded {
+  max-height: 500px;
+  opacity: 1;
+  visibility: visible;
+  transition: max-height 1s, opacity 1s ease-in-out, visibility 0s;
 }
 
 .contact-div {
