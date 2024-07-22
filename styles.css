@@ -362,17 +362,16 @@ main {
 /* ************************ */
 
 .choose-set-div {
-  position: relative;
   display: flex;
   flex-direction: column;
   gap: 15px;
-  padding: 0 0 0 15px;
   margin-bottom: 50px;
 }
 
 .choose-set-div h2 {
   font-size: 16px;
   color: #141719;
+  padding-left: 15px;
 }
 
 .set-image {
@@ -384,20 +383,18 @@ main {
   transition: transform 0.5s ease;
 }
 
-.set-image-container:hover img {
-  transform: scale(1.1);
+.choose-set-slide:hover img {
+  transform: scale(1.05);
 }
 
 .set-image-container {
   position: relative;
   display: flex;
-  gap: 15px;
   overflow: hidden;
-  width: 80%;
   border-radius: 10px;
 }
 
-.set-image-container::before {
+.choose-set-slide::before {
   content: "";
   position: absolute;
   top: 0;
@@ -411,7 +408,7 @@ main {
 
 .set-image-inside-div {
   position: absolute;
-  top: 65%;
+  bottom: 15%;
   left: 12%;
   display: flex;
   flex-direction: column;
@@ -425,12 +422,23 @@ main {
   z-index: 2;
 }
 
-.set-image-inside-div a {
+.set-image-inside-div p {
   display: flex;
   align-items: center;
   gap: 5px;
-  text-decoration: none;
   color: white;
+}
+
+.choose-set-slider {
+  display: flex;
+  overflow-x: scroll;
+  gap: 15px;
+  padding: 0 15px;
+}
+
+.choose-set-slide {
+  position: relative;
+  min-width: 280px;
 }
 
 /* ******************** */
@@ -469,11 +477,11 @@ main {
 /* ******************* */
 
 .offers-div {
-  padding: 0 15px;
   margin-bottom: 70px;
 }
 
 .offers-text-div {
+  padding: 0 15px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
@@ -507,31 +515,13 @@ main {
   fill: #007aff;
 }
 
-.offers-main-div {
-  width: 80%;
-  border-radius: 5px;
-  overflow: hidden;
-  border: 1px solid #d8d8d8;
-  transition: box-shadow 0.5s ease;
-}
-
-.offers-main-div:hover img {
-  transform: scale(1.1);
-}
-
-.offers-main-div:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
 .offers-inside-div {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
 
 .offers-image {
-  width: 100%;
   height: 160px;
   object-fit: cover;
   object-position: 50% 50%;
@@ -567,9 +557,50 @@ main {
   z-index: 1;
   right: -1%;
   top: 5%;
-  background-image: url("images/tegeta-small.png");
-  background-size: cover;
   border-radius: 5px;
+  overflow: hidden;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+}
+
+.offers-slider {
+  display: flex;
+  overflow-x: scroll;
+  padding: 15px 20px;
+  gap: 15px;
+  margin-bottom: 60px;
+}
+
+.offers-slide {
+  min-width: 280px;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #d8d8d8;
+  transition: box-shadow 0.5s ease;
+}
+
+.offers-slide:hover .offers-image {
+  transform: scale(1.05);
+}
+
+.offers-slide:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.offers-slider::-webkit-scrollbar-track {
+  background: #d8d8d8;
+}
+
+.offers-slider::-webkit-scrollbar-thumb {
+  background: #182cc0;
+}
+
+.offers-slider::-webkit-scrollbar {
+  height: 2px;
 }
 
 /* ************************ */
@@ -627,30 +658,14 @@ main {
 /* ******************* */
 
 .products-div {
-  padding: 0 15px;
   margin-bottom: 70px;
 }
 
 .products-div h2 {
+  padding: 0 15px;
   font-size: 16px;
   color: #141719;
   margin-bottom: 20px;
-}
-
-.products-main-div {
-  width: 80%;
-  border-radius: 5px;
-  overflow: hidden;
-  border: 1px solid #d8d8d8;
-  transition: box-shadow 0.5s ease;
-}
-
-.products-main-div:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.products-main-div:hover img {
-  transform: scale(1.1);
 }
 
 .products-div a {
@@ -665,15 +680,13 @@ main {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
 
 .products-image {
-  width: 100%;
   height: 160px;
   object-fit: cover;
   object-position: 50% 50%;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   transition: transform 0.5s ease;
 }
 
@@ -684,7 +697,7 @@ main {
 .products-text-div h3 {
   font-size: 16px;
   color: #141719;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .products-text-div p {
@@ -698,47 +711,106 @@ main {
   font-weight: bold;
 }
 
+.products-slider {
+  display: flex;
+  overflow-x: scroll;
+  padding: 0px 15px 20px 15px;
+  gap: 15px;
+}
+
+.products-slide {
+  min-width: 280px;
+  height: 340px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #d8d8d8;
+  transition: box-shadow 0.5s ease;
+}
+
+.products-slide:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.products-slide:hover img {
+  transform: scale(1.05);
+}
+
+.products-slider::-webkit-scrollbar-track {
+  background: #d8d8d8;
+}
+
+.products-slider::-webkit-scrollbar-thumb {
+  background: #182cc0;
+}
+
+.products-slider::-webkit-scrollbar {
+  height: 2px;
+}
+
 /* ******************* */
 /* ჯილდოების სტილები */
 /* ***************** */
 
 .reward-div {
-  padding: 0 15px;
   margin-bottom: 70px;
 }
 
 .reward-div h2 {
+  padding: 0 15px;
   font-size: 16px;
   color: #141719;
   margin-bottom: 20px;
 }
 
-.reward-inside-div {
-  width: 85%;
-  background-color: white;
-  padding: 25px;
-  transition: box-shadow 0.5s ease;
-}
-
-.reward-inside-div:hover {
+.rewards-slide:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.reward-inside-div img {
+.rewards-slide img {
   width: 120px;
+  height: 60px;
   margin-bottom: 20px;
 }
 
-.reward-inside-div h3 {
+.rewards-slide h3 {
   font-size: 17px;
   color: #141719;
   margin-bottom: 20px;
   line-height: 35px;
 }
 
-.reward-inside-div p {
+.rewards-slide p {
   font-size: 16px;
   color: #555f62;
+}
+
+.rewards-slider {
+  display: flex;
+  overflow-x: scroll;
+  padding: 0 15px 20px 15px;
+  gap: 15px;
+}
+
+.rewards-slide {
+  min-width: 280px;
+  height: 280px;
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: box-shadow 0.5s ease;
+}
+
+.rewards-slider::-webkit-scrollbar-track {
+  background: #d8d8d8;
+}
+
+.rewards-slider::-webkit-scrollbar-thumb {
+  background: #182cc0;
+}
+
+.rewards-slider::-webkit-scrollbar {
+  height: 2px;
 }
 
 /* ***************** */
