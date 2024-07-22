@@ -166,7 +166,7 @@ header.isHeaderHidden {
 }
 
 .burger-arrow-div {
-  padding: 30px 20px 15px 20px;
+  padding: 30px 20px;
   border-bottom: 1px solid #d8d8d8;
 }
 
@@ -179,7 +179,7 @@ header.isHeaderHidden {
 .rules-burger-div {
   display: flex;
   flex-direction: column;
-  padding: 30px 20px 70px 20px;
+  padding: 50px 20px 81px 20px;
   background-color: #f9fafa;
 }
 
@@ -200,6 +200,7 @@ header.isHeaderHidden {
 }
 
 main {
+  position: relative;
   padding: 15px 0;
   background-color: #f9fafa;
 }
@@ -220,6 +221,57 @@ main {
   color: #141719;
   margin-bottom: 40px;
   padding: 0 15px;
+}
+
+/* ******************** */
+/* menu trigger styles */
+/* ****************** */
+
+.menu-trigger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  position: fixed;
+  top: 680px;
+  right: 13px;
+  z-index: 10;
+}
+
+.open-close-div {
+  background-color: #555f62;
+  padding: 10px 13px;
+  opacity: 0.8;
+  border-radius: 50%;
+}
+
+.menu-trigger-options-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.menu-trigger-options-closed-div {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.menu-trigger-options-inside-div {
+  background-color: #fff;
+  padding: 10px 13px;
+  border-radius: 50%;
+}
+
+.menu-icon {
+  display: block;
+  transition: opacity 0.5s ease;
+}
+
+.menu-close {
+  display: none;
+  transition: opacity 0.5s ease;
 }
 
 /* ************************* */
