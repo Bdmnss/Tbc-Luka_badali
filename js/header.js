@@ -1,3 +1,4 @@
+const header = document.querySelector("header");
 const main = document.querySelector("main");
 const footer = document.querySelector("footer");
 const burgerIcon = document.querySelector(".burger-icon");
@@ -14,11 +15,8 @@ burgerIcon.addEventListener("click", function () {
     header.style.backgroundColor = "#f9fafa";
   } else {
     hideElementWithTransition(burgerMenu);
-    console.log(burgerMenu);
     showElementWithTransition(main);
-    console.log(main);
     showElementWithTransition(footer);
-    console.log(footer);
     burgerIcon.classList.remove("closeIcon");
     header.style.backgroundColor = "#fff";
   }
