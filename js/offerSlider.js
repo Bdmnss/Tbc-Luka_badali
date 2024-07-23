@@ -1,19 +1,18 @@
-const container = document.querySelector(".offers-slider");
-const items = container.querySelectorAll(".offers-slide");
-let itemWidth = items[0].offsetWidth;
+const offerContainer = document.querySelector(".offers-slider");
+const offerItems = offerContainer.querySelectorAll(".offers-slide");
+let offerItemWidth = offerItems[0].offsetWidth;
 
-let isScrolling;
+let offerIsScrolling;
 
-container.addEventListener("scroll", () => {
-  window.clearTimeout(isScrolling);
+offerContainer.addEventListener("scroll", () => {
+  window.clearTimeout(offerIsScrolling);
 
-  isScrolling = setTimeout(() => {
-    const scrollLeft = container.scrollLeft;
-    const index = Math.round(scrollLeft / itemWidth);
-    console.log(index);
+  offerIsScrolling = setTimeout(() => {
+    const scrollLeft = offerContainer.scrollLeft;
+    const index = Math.round(scrollLeft / offerItemWidth);
 
-    container.scrollTo({
-      left: index * itemWidth,
+    offerContainer.scrollTo({
+      left: index * offerItemWidth,
       behavior: "smooth",
     });
   }, 100);

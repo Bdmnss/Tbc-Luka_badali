@@ -215,6 +215,9 @@ header.isHeaderHidden {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: relative;
   padding: 15px 0;
   background-color: #f9fafa;
@@ -235,7 +238,6 @@ main {
   font-size: 13px;
   color: #141719;
   margin-bottom: 40px;
-  padding: 0 15px;
 }
 
 /* ******************** */
@@ -297,7 +299,7 @@ main {
   position: relative;
   display: flex;
   justify-content: center;
-  text-align: center;
+  align-items: center;
   color: white;
   margin-bottom: 100px;
 }
