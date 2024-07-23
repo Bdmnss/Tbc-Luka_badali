@@ -31,8 +31,11 @@ burgerIcon.addEventListener("click", function () {
     header.style.backgroundColor = "#f9fafa";
   } else {
     hideElementWithTransition(burgerMenu);
+    console.log(burgerMenu);
     showElementWithTransition(main);
+    console.log(main);
     showElementWithTransition(footer);
+    console.log(footer);
     burgerIcon.classList.remove("closeIcon");
     header.style.backgroundColor = "#fff";
   }
