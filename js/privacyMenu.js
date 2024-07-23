@@ -12,3 +12,8 @@ privacyCloseIcon.addEventListener("click", function () {
   privacyMenu.classList.remove("isOpened");
   overlay.classList.remove("isOpened");
 });
+
+overlay.addEventListener("click", function () {
+  privacyMenu.classList.remove("isOpened");
+  overlay.classList.remove("isOpened");
+});
