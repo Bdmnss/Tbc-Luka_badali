@@ -17,6 +17,7 @@ menuButton.addEventListener("click", function (event) {
       closeIcon.classList.add("menu-icon");
       menuOptions.classList.remove("menu-trigger-options-closed-div");
       menuOptions.classList.add("menu-trigger-options-div");
+      menuOptions.style.display = "block";
       closeIcon.style.opacity = "1";
     }, 500);
   } else {
@@ -31,5 +32,9 @@ menuButton.addEventListener("click", function (event) {
       menuOptions.classList.add("menu-trigger-options-closed-div");
       menuIcon.style.opacity = "1";
     }, 500);
+
+    setTimeout(() => {
+      menuOptions.style.display = "none";
+    }, 1000);
   }
 });

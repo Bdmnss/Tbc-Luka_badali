@@ -22,6 +22,10 @@ header {
   transition: 0.2s;
 }
 
+.tbc-concept-large {
+  display: none;
+}
+
 .search-icon {
   fill: #555f62;
   transition: fill 0.5s ease;
@@ -162,7 +166,7 @@ header {
 }
 
 .burger-arrow-div {
-  padding: 30px 20px;
+  padding: 30px 15px;
   border-bottom: 1px solid #d8d8d8;
 }
 
@@ -175,7 +179,7 @@ header {
 .rules-burger-div {
   display: flex;
   flex-direction: column;
-  padding: 50px 20px 81px 20px;
+  padding: 50px 15px 81px 15px;
   background-color: #f9fafa;
 }
 
@@ -231,9 +235,10 @@ main {
   display: flex;
   align-items: center;
   gap: 5px;
-  font-size: 13px;
+  font-size: 14px;
   color: #141719;
   margin-bottom: 40px;
+  padding: 0 15px;
 }
 
 /* ******************** */
@@ -253,7 +258,7 @@ main {
 
 .open-close-div {
   background-color: #555f62;
-  padding: 10px 13px;
+  padding: 12px;
   opacity: 0.8;
   border-radius: 50%;
 }
@@ -267,6 +272,7 @@ main {
 }
 
 .menu-trigger-options-closed-div {
+  display: none;
   opacity: 0;
   transition: opacity 0.5s ease;
 }
@@ -335,8 +341,12 @@ main {
 }
 
 .hero-data h2 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
+}
+
+.hero-data p {
+  font-size: 16px;
 }
 
 .hero-data button {
@@ -366,7 +376,7 @@ main {
 .subscribe-tbc-text-div {
   padding: 0 15px;
   color: #141719;
-  font-size: 28px;
+  font-size: 26px;
   margin-bottom: 70px;
 }
 
@@ -421,8 +431,8 @@ main {
 
 .set-image-inside-div {
   position: absolute;
-  bottom: 15%;
-  left: 12%;
+  bottom: 10%;
+  left: 10%;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -467,7 +477,7 @@ main {
 }
 
 .number-inside-div {
-  padding: 20px 25px;
+  padding: 24px;
   width: 100%;
   background-color: white;
   border-radius: 10px;
@@ -511,6 +521,7 @@ main {
 }
 
 .offers-div a {
+  font-size: 16px;
   display: flex;
   align-items: center;
   gap: 5px;
@@ -538,12 +549,11 @@ main {
   height: 160px;
   object-fit: cover;
   object-position: 50% 50%;
-  margin-bottom: 15px;
   transition: transform 0.5s ease;
 }
 
 .offers-inside-text-div {
-  padding: 0 15px;
+  padding: 20px;
 }
 
 .offers-inside-text-div div {
@@ -556,7 +566,6 @@ main {
 }
 
 .offers-inside-text-div h3 {
-  margin-bottom: 40px;
   font-size: 16px;
   color: #141719;
   line-height: 30px;
@@ -583,7 +592,7 @@ main {
   display: flex;
   overflow-x: scroll;
   scroll-behavior: smooth;
-  padding: 15px 20px;
+  padding: 15px 15px;
   gap: 15px;
   margin-bottom: 60px;
 }
@@ -641,6 +650,10 @@ main {
   margin-bottom: 20px;
 }
 
+.mobile-text-div h2 {
+  display: none;
+}
+
 .digital-bank-div p {
   font-size: 16px;
   color: #555f62;
@@ -683,11 +696,7 @@ main {
 }
 
 .products-div a {
-  display: flex;
-  align-items: center;
-  gap: 5px;
   text-decoration: none;
-  color: #182cc0;
 }
 
 .products-inside-div {
@@ -700,12 +709,11 @@ main {
   height: 160px;
   object-fit: cover;
   object-position: 50% 50%;
-  margin-bottom: 20px;
   transition: transform 0.5s ease;
 }
 
 .products-text-div {
-  padding: 0 15px;
+  padding: 20px;
 }
 
 .products-text-div h3 {
@@ -718,7 +726,6 @@ main {
   font-size: 14px;
   color: #555f62;
   line-height: 25px;
-  margin-bottom: 20px;
 }
 
 .products-text-div p > span {
@@ -734,7 +741,7 @@ main {
 
 .products-slide {
   min-width: 300px;
-  height: 360px;
+  height: 380px;
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid #d8d8d8;
@@ -782,13 +789,12 @@ main {
 }
 
 .rewards-slide img {
-  width: 120px;
-  height: 60px;
+  height: 55px;
   margin-bottom: 20px;
 }
 
 .rewards-slide h3 {
-  font-size: 17px;
+  font-size: 16px;
   color: #141719;
   margin-bottom: 20px;
   line-height: 35px;
@@ -807,8 +813,8 @@ main {
 }
 
 .rewards-slide {
-  min-width: 300px;
-  height: 320px;
+  min-width: 370px;
+  height: 270px;
   background-color: white;
   padding: 25px;
   border-radius: 10px;
@@ -837,11 +843,15 @@ footer {
 }
 
 .logo-language-div {
-  padding: 30px 20px;
+  padding: 32px 15px;
   display: flex;
   justify-content: space-between;
   padding-bottom: 30px;
   border-bottom: 1px solid #d8d8d8;
+}
+
+.footer-large-tbc-logo {
+  display: none;
 }
 
 .language-div {
@@ -872,7 +882,7 @@ footer {
 }
 
 .footer-arrow-div {
-  padding: 30px 20px;
+  padding: 24px 15px;
   border-bottom: 1px solid #d8d8d8;
 }
 
@@ -926,7 +936,7 @@ footer {
 }
 
 .contact-div {
-  padding: 30px 20px;
+  padding: 32px 15px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -952,7 +962,7 @@ footer {
 }
 
 .social-networks-div {
-  padding: 20px 20px;
+  padding: 20px 15px;
   margin-bottom: 20px;
 }
 
@@ -974,7 +984,7 @@ footer {
 
 .social-btn {
   border: none;
-  padding: 15px 15px;
+  padding: 15px;
   border-radius: 5px;
   transition: background-color 0.5s ease;
 }
@@ -988,7 +998,7 @@ footer {
 }
 
 .rules-div {
-  padding: 20px 20px;
+  padding: 24px 15px;
   background-color: #f9fafa;
 }
 
@@ -1042,7 +1052,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 20px;
+  padding: 24px 15px;
   border-bottom: 1px solid #d8d8d8;
 }
 
@@ -1063,9 +1073,13 @@ footer {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 20px 20px 0 20px;
+  padding: 0 15px;
   overflow: auto;
-  max-height: calc(100% - 80px);
+  max-height: calc(100% - 79px);
+}
+
+.privacy-text-div .first-text {
+  margin-top: 24px;
 }
 
 .privacy-text-div::-webkit-scrollbar-track {
@@ -1084,7 +1098,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 550px;
+  width: 650px;
   overflow-x: auto;
   overflow-y: auto;
 }
@@ -1159,7 +1173,7 @@ th {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 20px;
+  padding: 24px 15px;
   border-bottom: 1px solid #d8d8d8;
 }
 
@@ -1172,7 +1186,7 @@ th {
   max-height: calc(100% - 80px);
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 24px 15px;
   overflow-y: scroll;
 }
 
@@ -1198,4 +1212,477 @@ th {
   padding: 3px;
   display: flex;
   align-items: center;
+}
+
+@media only screen and (min-width: 480px) {
+  header {
+    padding: 20px 45px;
+  }
+
+  .header-tools-div a {
+    font-size: 16px;
+  }
+
+  .burger-arrow-div {
+    padding: 30px 45px;
+  }
+
+  .rules-burger-div {
+    padding: 50px 45px 81px 45px;
+  }
+
+  .left-arrow {
+    display: none;
+  }
+
+  .navigate-main-div {
+    margin-bottom: 60px;
+    padding: 0 45px;
+  }
+
+  .hero-data {
+    padding: 0 45px;
+    margin-top: 250px;
+  }
+
+  .hero-data h2 {
+    font-size: 26px;
+    font-weight: bold;
+  }
+
+  .hero-image {
+    height: 450px;
+  }
+
+  .hero-block::before {
+    width: 100%;
+    height: 450px;
+  }
+
+  .subscribe-tbc-text-div {
+    padding: 0 45px;
+    font-size: 30px;
+  }
+
+  .choose-set-div h2 {
+    font-size: 26px;
+    padding-left: 45px;
+  }
+
+  .choose-set-slider {
+    padding: 0 45px;
+  }
+
+  .number-div {
+    padding: 0 45px;
+    gap: 25px;
+  }
+
+  .number-inside-div {
+    padding: 40px 48px;
+  }
+
+  .number {
+    font-size: 46px;
+    margin-bottom: 20px;
+  }
+
+  .number-text {
+    font-size: 18px;
+  }
+
+  .mobile-image-div img {
+    width: 370px;
+  }
+
+  .offers-text-div {
+    padding: 0 45px;
+  }
+
+  .offers-image {
+    height: 181px;
+  }
+
+  .offers-div h2 {
+    font-size: 26px;
+  }
+
+  .offers-div a {
+    font-weight: bold;
+  }
+
+  .offers-slider {
+    padding: 15px 45px;
+  }
+
+  .digital-bank-div {
+    padding: 45px 45px;
+  }
+
+  .digital-bank-div h2 {
+    font-size: 26px;
+  }
+
+  .products-div h2 {
+    padding: 0 45px;
+    font-size: 26px;
+  }
+
+  .products-slider {
+    padding: 0px 45px 20px 45px;
+  }
+
+  .reward-div h2 {
+    padding: 0 45px;
+    font-size: 26px;
+  }
+
+  .rewards-slider {
+    padding: 0 45px 20px 45px;
+  }
+
+  .rewards-slide {
+    min-width: 320px;
+  }
+
+  .logo-language-div {
+    padding: 36px 45px;
+  }
+
+  .footer-arrow-div {
+    padding: 36px 45px;
+  }
+
+  .footer-arrow-div h3 {
+    font-size: 26px;
+  }
+
+  .contact-div {
+    padding: 32px 45px;
+  }
+
+  .contact-div h3 {
+    font-size: 26px;
+  }
+
+  .social-networks-div {
+    padding: 20px 45px;
+  }
+
+  .social-networks-div h3 {
+    font-size: 26px;
+  }
+  .rules-div {
+    padding: 32px 45px;
+    background-color: #f9fafa;
+  }
+
+  .privacy-menu {
+    height: 90%;
+  }
+
+  .privacy-menu-header-div {
+    padding: 32px 45px;
+  }
+
+  .privacy-menu-header-div h2 {
+    font-size: 26px;
+  }
+
+  .privacy-menu-close-div {
+    padding: 8px;
+  }
+
+  .privacy-text-div {
+    padding: 0 45px;
+    max-height: calc(100% - 105px);
+  }
+
+  .privacy-text-div .first-text {
+    margin-top: 40px;
+  }
+
+  .rules-menu {
+    height: 90%;
+  }
+
+  .rules-menu-header-div {
+    padding: 32px 45px;
+  }
+
+  .rules-menu-header-div h2 {
+    font-size: 26px;
+  }
+
+  .rules-menu-text-div {
+    padding: 40px 45px;
+  }
+
+  .rules-menu-close-div {
+    padding: 8px;
+  }
+
+  .open-close-div {
+    padding: 16px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .tbc-concept-mobile {
+    display: none;
+  }
+
+  .tbc-concept-large {
+    display: block;
+  }
+
+  .header-tools-div {
+    gap: 25px;
+  }
+
+  .rules-burger-div {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    background-color: #f9fafa;
+    justify-content: space-between;
+  }
+
+  .rules-burger-text-div {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 0;
+    gap: 25px;
+  }
+
+  .rules-burger-div p {
+    display: flex;
+    align-items: center;
+    left: 0;
+    gap: 10px;
+  }
+
+  .hero-block::before {
+    left: auto;
+    width: 88%;
+    height: 450px;
+    border-radius: 5px;
+  }
+
+  .hero-image {
+    width: 88%;
+    height: 450px;
+    border-radius: 5px;
+  }
+
+  .hero-data {
+    padding: 0 125px;
+    margin-top: 250px;
+  }
+
+  .hero-data h2 {
+    font-size: 26px;
+    font-weight: bold;
+  }
+
+  .hero-data p {
+    font-size: 16px;
+  }
+
+  .hero-data button {
+    width: 26%;
+  }
+
+  .choose-set-slider {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 35px;
+  }
+
+  .choose-set-slider a:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .choose-set-slider a:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
+  .choose-set-slider a:nth-child(3) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .grid-image {
+    height: 495px;
+  }
+
+  .grid-text {
+    bottom: 5%;
+  }
+
+  .set-image-inside-div h3 {
+    font-size: 26px;
+  }
+
+  .offers-slide {
+    min-width: 330px;
+    height: 375px;
+  }
+
+  .offers-image {
+    height: 201px;
+    margin-bottom: 0;
+  }
+
+  .offers-inside-text-div {
+    padding: 28px;
+  }
+
+  .offers-inside-text-div div {
+    font-size: 16px;
+  }
+
+  .offers-inside-text-div h3 {
+    font-size: 18px;
+  }
+
+  .digital-bank-div {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 45px 45px 0 45px;
+    gap: 50px;
+  }
+
+  .mobile-image-div img {
+    width: 230px;
+    margin-bottom: 0;
+  }
+
+  .digital-bank-div h2 {
+    display: none;
+  }
+
+  .mobile-text-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .mobile-text-div h2 {
+    display: block;
+    font-size: 26px;
+  }
+
+  .download-button {
+    width: 35%;
+  }
+
+  .products-text-div {
+    padding: 28px;
+  }
+
+  .products-text-div h3 {
+    font-size: 18px;
+  }
+
+  .products-text-div p {
+    font-size: 16px;
+  }
+
+  .products-slide {
+    min-width: 330px;
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #d8d8d8;
+    transition: box-shadow 0.5s ease;
+  }
+
+  .rewards-slide h3 {
+    font-size: 18px;
+  }
+
+  .footer-links-div {
+    display: flex;
+  }
+
+  .contact-and-social-div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo-language-div {
+    border-bottom: none;
+  }
+
+  .footer-arrow {
+    display: none;
+  }
+
+  .footer-arrow-div-content {
+    max-height: none;
+    opacity: 1;
+    visibility: visible;
+    transition: none;
+  }
+
+  .footer-arrow-div h3 {
+    font-size: 16px;
+  }
+
+  .contact-div h3 {
+    font-size: 16px;
+  }
+
+  .social-networks-div h3 {
+    font-size: 16px;
+  }
+
+  .footer-arrow-div {
+    padding: 32px 0 32px 45px;
+  }
+
+  .contact-div {
+    padding: 32px 45px;
+  }
+
+  .social-networks-div {
+    padding: 20px 45px;
+  }
+
+  .social-btn {
+    padding: 10px;
+  }
+
+  .rules-div {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .rules-div p {
+    font-size: 14px;
+  }
+
+  .rules-text-div {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 0;
+  }
+
+  .rules-text-div p {
+    font-size: 14px;
+  }
+
+  .footer-mobile-tbc-logo {
+    display: none;
+  }
+
+  .footer-large-tbc-logo {
+    display: block;
+  }
 }
