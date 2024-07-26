@@ -4,6 +4,44 @@
   box-sizing: border-box;
 }
 
+.scrollbar-margin-container {
+  margin-inline: 10px !important;
+  width: 93% !important;
+
+  @media only screen and (min-width: 480px) {
+    margin-inline: 40px !important;
+    width: 81% !important;
+  }
+
+  @media only screen and (min-width: 992px) {
+    width: 90% !important;
+  }
+}
+
+.slider-padding-container {
+  padding-inline: 15px !important;
+
+  @media only screen and (min-width: 480px) {
+    padding-inline: 45px !important;
+  }
+
+  @media only screen and (min-width: 992px) {
+    padding-inline: 47px !important;
+  }
+}
+
+.container-padding {
+  padding-inline: 15px;
+
+  @media only screen and (min-width: 480px) {
+    padding-inline: 45px;
+  }
+
+  @media only screen and (min-width: 992px) {
+    padding-inline: 47px;
+  }
+}
+
 /* ***************** */
 /* ჰედერის სტილები */
 /* *************** */
@@ -28,16 +66,8 @@ header {
   height: 100%;
 }
 
-.container-padding {
-  padding-inline: 15px;
-
-  @media only screen and (min-width: 480px) {
-    padding-inline: 45px;
-  }
-
-  @media only screen and (min-width: 992px) {
-    padding-inline: 47px;
-  }
+.desktop-menu {
+  display: none;
 }
 
 .tbc-concept-mobile {
@@ -196,7 +226,7 @@ header {
 }
 
 .burger-arrow-div {
-  padding: 30px 15px;
+  padding-block: 30px;
   border-bottom: 1px solid #d8d8d8;
 }
 
@@ -209,7 +239,7 @@ header {
 .rules-burger-div {
   display: flex;
   flex-direction: column;
-  padding: 50px 15px 81px 15px;
+  padding-block: 50px 81px;
   background-color: #f9fafa;
 }
 
@@ -406,7 +436,6 @@ main {
 /* ************************* */
 
 .subscribe-tbc-text-div {
-  padding: 0 15px;
   color: #141719;
   font-size: 26px;
   margin-bottom: 70px;
@@ -426,7 +455,6 @@ main {
 .choose-set-div h2 {
   font-size: 16px;
   color: #141719;
-  padding-left: 15px;
 }
 
 .set-image {
@@ -489,7 +517,6 @@ main {
   display: flex;
   overflow-x: auto;
   gap: 15px;
-  padding: 0 15px;
 }
 
 .choose-set-slide {
@@ -504,7 +531,6 @@ main {
 .number-div {
   display: flex;
   flex-direction: column;
-  padding: 0 15px;
   gap: 15px;
   margin-bottom: 70px;
 }
@@ -537,10 +563,34 @@ main {
 }
 
 .offers-div h2 {
-  padding: 0 15px;
   font-size: 16px;
   color: #141719;
   margin-bottom: 20px;
+}
+
+.offers-text-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.offers-text-div a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  gap: 10px;
+  color: #182cc0;
+  font-size: 16px;
+}
+
+.offers-text-div a:hover {
+  color: #007aff;
+  transition: color 0.5s ease;
+}
+
+.offers-text-div a:hover svg {
+  fill: #007aff;
+  transition: fill 0.5s ease;
 }
 
 .offers-inside-div {
@@ -593,19 +643,22 @@ main {
 }
 
 .offers-slider {
+  height: 330px;
   display: flex !important;
   overflow: hidden !important;
-  padding: 0 15px 20px 15px !important;
+  padding-bottom: 20px !important;
   gap: 15px !important;
 }
 
 .offers-slide {
-  width: 300px !important;
-  height: 330px !important;
   border-radius: 10px !important;
   overflow: hidden !important;
   border: 1px solid #d8d8d8 !important;
   transition: box-shadow 0.5s ease !important;
+}
+
+.offers-slide a {
+  text-decoration: none;
 }
 
 .offers-slide:hover .offers-image {
@@ -619,8 +672,6 @@ main {
 .offers-swiper-scrollbar {
   height: 2px !important;
   background: #d8d8d8 !important;
-  width: 93% !important;
-  margin-left: 10px !important;
 }
 
 .offers-swiper-scrollbar .swiper-scrollbar-drag {
@@ -632,7 +683,7 @@ main {
 /* ********************** */
 
 .digital-bank-div {
-  padding: 20px 15px;
+  padding-block: 20px;
   background-color: white;
   margin-bottom: 100px;
 }
@@ -690,7 +741,6 @@ main {
 }
 
 .products-div h2 {
-  padding: 0 15px;
   font-size: 16px;
   color: #141719;
   margin-bottom: 20px;
@@ -734,15 +784,14 @@ main {
 }
 
 .products-slider {
+  height: 380px;
   display: flex !important;
   overflow: hidden !important;
-  padding: 0 15px 20px 15px !important;
+  padding-block: 0 20px !important;
   gap: 15px !important;
 }
 
 .products-slide {
-  width: 300px !important;
-  height: 380px !important;
   border-radius: 10px !important;
   overflow: hidden !important;
   border: 1px solid #d8d8d8 !important;
@@ -760,8 +809,6 @@ main {
 .products-swiper-scrollbar {
   height: 2px !important;
   background: #d8d8d8 !important;
-  width: 93% !important;
-  margin-left: 10px !important;
 }
 
 .products-swiper-scrollbar .swiper-scrollbar-drag {
@@ -796,7 +843,7 @@ main {
   font-size: 16px;
   color: #141719;
   margin-bottom: 20px;
-  line-height: 20px;
+  line-height: 35px;
 }
 
 .reward-slide p {
@@ -805,9 +852,9 @@ main {
 }
 
 .reward-swiper-container {
-  height: 280px;
+  height: 300px;
   overflow-x: hidden;
-  padding: 0 15px 20px 15px;
+  padding-block: 0 20px;
 }
 
 .reward-slide {
@@ -821,9 +868,6 @@ main {
 .reward-swiper-scrollbar {
   height: 2px !important;
   background: #d8d8d8 !important;
-  width: 93% !important;
-  margin-left: 10px !important;
-  margin-bottom: 80px !important;
 }
 
 .reward-swiper-scrollbar .swiper-scrollbar-drag {
@@ -839,7 +883,7 @@ footer {
 }
 
 .logo-language-div {
-  padding: 32px 15px;
+  padding-block: 32px;
   display: flex;
   justify-content: space-between;
   padding-bottom: 30px;
@@ -878,7 +922,7 @@ footer {
 }
 
 .footer-arrow-div {
-  padding: 24px 15px;
+  padding-block: 24px;
   border-bottom: 1px solid #d8d8d8;
 }
 
@@ -932,7 +976,7 @@ footer {
 }
 
 .contact-div {
-  padding: 32px 15px;
+  padding-block: 32px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -958,7 +1002,7 @@ footer {
 }
 
 .social-networks-div {
-  padding: 20px 15px;
+  padding-block: 20px;
   margin-bottom: 20px;
 }
 
@@ -994,7 +1038,7 @@ footer {
 }
 
 .rules-div {
-  padding: 24px 15px;
+  padding-block: 24px;
   background-color: #f9fafa;
 }
 
@@ -1033,7 +1077,7 @@ footer {
   height: 100%;
   width: 100%;
   bottom: 0;
-  z-index: 10;
+  z-index: 100;
   overflow: hidden;
   background-color: white;
   transition: 1s;
@@ -1048,7 +1092,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 15px;
+  padding-block: 24px;
   border-bottom: 1px solid #d8d8d8;
 }
 
@@ -1069,7 +1113,6 @@ footer {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 0 15px;
   overflow: auto;
   max-height: calc(100% - 79px);
 }
@@ -1154,7 +1197,7 @@ th {
   height: 100%;
   width: 100%;
   bottom: 0;
-  z-index: 10;
+  z-index: 100;
   overflow: hidden;
   background-color: white;
   transition: 1s;
@@ -1169,7 +1212,7 @@ th {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 15px;
+  padding-block: 24px;
   border-bottom: 1px solid #d8d8d8;
 }
 
@@ -1182,7 +1225,7 @@ th {
   max-height: calc(100% - 80px);
   display: flex;
   flex-direction: column;
-  padding: 24px 15px;
+  padding-block: 24px;
   overflow-y: scroll;
 }
 
@@ -1216,11 +1259,11 @@ th {
   }
 
   .burger-arrow-div {
-    padding: 30px 45px;
+    padding-block: 30px;
   }
 
   .rules-burger-div {
-    padding: 50px 45px 81px 45px;
+    padding-block: 50px 81px;
   }
 
   .left-arrow {
@@ -1250,21 +1293,14 @@ th {
   }
 
   .subscribe-tbc-text-div {
-    padding: 0 45px;
     font-size: 30px;
   }
 
   .choose-set-div h2 {
     font-size: 26px;
-    padding-left: 45px;
-  }
-
-  .choose-set-slider {
-    padding: 0 45px;
   }
 
   .number-div {
-    padding: 0 45px;
     gap: 25px;
   }
 
@@ -1302,11 +1338,11 @@ th {
   }
 
   .offers-slider {
-    padding: 15px 45px;
+    height: 370px;
   }
 
   .digital-bank-div {
-    padding: 45px 45px;
+    padding-block: 45px;
   }
 
   .digital-bank-div h2 {
@@ -1314,12 +1350,11 @@ th {
   }
 
   .products-div h2 {
-    padding: 0 45px;
     font-size: 26px;
   }
 
   .products-slider {
-    padding: 0px 45px 20px 45px;
+    padding-block: 0px 20px;
   }
 
   .reward-div h2 {
@@ -1335,12 +1370,16 @@ th {
     min-width: 320px;
   }
 
+  .reward-swiper-container {
+    height: 280px;
+  }
+
   .logo-language-div {
-    padding: 36px 45px;
+    padding-block: 36px;
   }
 
   .footer-arrow-div {
-    padding: 36px 45px;
+    padding-block: 36px;
   }
 
   .footer-arrow-div h3 {
@@ -1348,7 +1387,7 @@ th {
   }
 
   .contact-div {
-    padding: 32px 45px;
+    padding-block: 32px;
   }
 
   .contact-div h3 {
@@ -1356,14 +1395,14 @@ th {
   }
 
   .social-networks-div {
-    padding: 20px 45px;
+    padding-block: 20px;
   }
 
   .social-networks-div h3 {
     font-size: 26px;
   }
   .rules-div {
-    padding: 32px 45px;
+    padding-block: 32px;
     background-color: #f9fafa;
   }
 
@@ -1372,7 +1411,7 @@ th {
   }
 
   .privacy-menu-header-div {
-    padding: 32px 45px;
+    padding-block: 32px;
   }
 
   .privacy-menu-header-div h2 {
@@ -1384,7 +1423,6 @@ th {
   }
 
   .privacy-text-div {
-    padding: 0 45px;
     max-height: calc(100% - 105px);
   }
 
@@ -1397,7 +1435,7 @@ th {
   }
 
   .rules-menu-header-div {
-    padding: 32px 45px;
+    padding-block: 32px;
   }
 
   .rules-menu-header-div h2 {
@@ -1405,7 +1443,7 @@ th {
   }
 
   .rules-menu-text-div {
-    padding: 40px 45px;
+    padding-block: 40px;
   }
 
   .rules-menu-close-div {
@@ -1417,6 +1455,16 @@ th {
   }
 }
 
+@media only screen and (min-width: 600px) {
+  .products-slider {
+    height: 420px;
+  }
+
+  .reward-swiper-container {
+    height: 340px;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .hero-block-wrapper {
     padding-inline: 0;
@@ -1424,6 +1472,10 @@ th {
 }
 
 @media only screen and (min-width: 768px) {
+  .footer-arrow-div {
+    border: none;
+  }
+
   .tbc-concept-mobile {
     display: none;
   }
@@ -1551,7 +1603,7 @@ th {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    padding: 45px 45px 0 45px;
+    padding-block: 45px 0;
     gap: 50px;
   }
 
@@ -1577,6 +1629,10 @@ th {
 
   .download-button {
     width: 35%;
+  }
+
+  .android-apple-download-div {
+    display: none;
   }
 
   .products-text-div {
@@ -1606,6 +1662,8 @@ th {
 
   .footer-links-div {
     display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #d8d8d8;
   }
 
   .contact-and-social-div {
@@ -1645,11 +1703,11 @@ th {
   }
 
   .contact-div {
-    padding: 32px 45px;
+    padding-block: 32px;
   }
 
   .social-networks-div {
-    padding: 20px 45px;
+    padding-block: 20px;
   }
 
   .social-btn {
@@ -1753,7 +1811,7 @@ th {
     display: none;
     position: fixed;
     top: 80px;
-    z-index: 10;
+    z-index: 100;
     background-color: white;
     width: 100%;
   }
@@ -1826,5 +1884,111 @@ th {
 
   .hero-data {
     padding-inline: 80px;
+  }
+
+  .download-button {
+    display: none;
+  }
+
+  .android-apple-download-div {
+    display: flex;
+    gap: 15px;
+  }
+
+  .download-button-svg {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    padding: 15px 25px;
+  }
+
+  .download-button-svg:hover {
+    background-color: #f9fafa;
+  }
+
+  .number-div {
+    flex-direction: row;
+  }
+}
+
+@media only screen and (min-width: 1110px) {
+  .subscribe-tbc-text-div p {
+    max-width: 1110px;
+    margin-inline: auto;
+  }
+
+  .choose-set-div {
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
+  .number-div {
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
+  .digital-bank-div > * {
+    max-width: 1300px;
+    margin-inline: auto;
+  }
+
+  .logo-language-div {
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
+  .footer-links-div {
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
+  .rules-div {
+    max-width: 1200px;
+    margin-inline: auto;
+    background-color: white;
+  }
+
+  .reward-div {
+    max-width: 1110px;
+    margin-inline: auto;
+  }
+
+  .swiper {
+    max-width: 1110px;
+    margin-inline: auto;
+  }
+
+  .products-div {
+    max-width: 1110px;
+    margin-inline: auto;
+  }
+
+  .offers-div {
+    max-width: 1110px;
+    margin-inline: auto;
+  }
+  .offers-text-div > * {
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .reward-div {
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
+  .swiper {
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
+  .products-div {
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+  .offers-div {
+    max-width: 1200px;
+    margin-inline: auto;
   }
 }
