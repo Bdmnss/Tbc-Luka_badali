@@ -11,83 +11,100 @@
     <script src="./js/menuTrigger.js" defer></script>
     <script src="./js/privacyMenu.js" defer></script>
     <script src="./js/rulesMenu.js" defer></script>
-    <script src="./js/slider.js" defer></script>
     <script src="./js/desktopHeaderMenu.js" defer></script>
+    <!-- <script src="./js/slider.js" defer></script> -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
   </head>
   <body>
-    <header>
-      <div>
-        <img
-          src="images/tbc-concept-mobile.svg"
-          alt="tbc logo"
-          class="tbc-concept-mobile"
-        />
-        <img
-          src="images/tbc-concept-large.svg"
-          alt="tbc logo"
-          class="tbc-concept-large"
-        />
-      </div>
-
-      <div class="desktop-header-menu">
-        <div class="desktop-header-menu-product-title">პროდუქტები</div>
-        <div class="desktop-header-menu-offer-title">შეთავაზებები</div>
-        <div class="desktop-header-menu-concept-title">კონსეპტის სივრცე</div>
-      </div>
-
-      <div class="header-tools-div">
-        <a href="https://tbcconcept.ge/ge/search"
-          ><svg
-            class="search-icon"
-            data-v-562b0aec=""
-            width="24"
-            height="24"
-            viewbox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              data-v-562b0aec=""
-              d="M21.7 20.3L15.5 14C16.5 12.7 17 11.2 17 9.5C17 5.4 13.6 2 9.5 2C5.4 2 2 5.4 2 9.5C2 13.6 5.4 17 9.5 17C11.2 17 12.8 16.4 14 15.5L20.2 21.7C20.4 21.9 20.7 22 20.9 22C21.1 22 21.4 21.9 21.6 21.7C22.1 21.3 22.1 20.7 21.7 20.3ZM4 9.5C4 6.5 6.5 4 9.5 4C12.5 4 15 6.5 15 9.5C15 12.5 12.5 15 9.5 15C6.5 15 4 12.5 4 9.5Z"
-            ></path>
-          </svg>
-        </a>
-
-        <a
-          class="header-arrow-group"
-          href="https://tbcconcept.ge/ge/products/kits"
-          ><svg
-            data-v-562b0aec=""
-            width="16"
-            height="16"
-            viewbox="0 0 16 16"
-            xmlns="http://www.w3.org/2000/svg"
-            class="arrow-icon"
-          >
-            <path
-              data-v-562b0aec=""
-              d="M9.7987 2.86675L14.4654 7.53341C14.732 7.80008 14.732 8.20008 14.4654 8.46675L9.7987 13.1334C9.53203 13.4001 9.13203 13.4001 8.86537 13.1334C8.5987 12.8667 8.5987 12.4667 8.86537 12.2001L12.3987 8.66675H1.9987C1.5987 8.66675 1.33203 8.40008 1.33203 8.00008C1.33203 7.60008 1.5987 7.33341 1.9987 7.33341H12.3987L8.86537 3.80008C8.73203 3.66675 8.66536 3.53341 8.66536 3.33341C8.66536 3.13341 8.73203 3.00008 8.86537 2.86675C9.13203 2.60008 9.53203 2.60008 9.7987 2.86675Z"
-            ></path>
-          </svg>
-          გამოიწერეთ ნაკრები</a
-        >
-        <div class="burger-icon">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-
-        <div class="language-div">
+    <header class="container-padding">
+      <div class="header-container">
+        <div class="header-left">
           <div>
-            <img src="images/earth.svg" alt="earth icon" />
-            <p>ქარ</p>
+            <img
+              src="images/tbc-concept-mobile.svg"
+              alt="tbc logo"
+              class="tbc-concept-mobile"
+            />
+            <img
+              src="images/tbc-concept-large.svg"
+              alt="tbc logo"
+              class="tbc-concept-large"
+            />
           </div>
-          <div>Eng</div>
+
+          <div class="desktop-header-menu">
+            <div class="desktop-header-menu-item">
+              <span>პროდუქტები</span>
+              <span class="menu-line"></span>
+            </div>
+            <div class="desktop-header-menu-item">
+              <span>შეთავაზებები</span>
+              <span class="menu-line"></span>
+            </div>
+            <div class="desktop-header-menu-item">
+              <span>კონსეპტის სივრცე</span>
+              <span class="menu-line"></span>
+            </div>
+          </div>
         </div>
+
+        <div class="header-tools-div">
+          <a href="https://tbcconcept.ge/ge/search"
+            ><svg
+              class="search-icon"
+              data-v-562b0aec=""
+              width="24"
+              height="24"
+              viewbox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                data-v-562b0aec=""
+                d="M21.7 20.3L15.5 14C16.5 12.7 17 11.2 17 9.5C17 5.4 13.6 2 9.5 2C5.4 2 2 5.4 2 9.5C2 13.6 5.4 17 9.5 17C11.2 17 12.8 16.4 14 15.5L20.2 21.7C20.4 21.9 20.7 22 20.9 22C21.1 22 21.4 21.9 21.6 21.7C22.1 21.3 22.1 20.7 21.7 20.3ZM4 9.5C4 6.5 6.5 4 9.5 4C12.5 4 15 6.5 15 9.5C15 12.5 12.5 15 9.5 15C6.5 15 4 12.5 4 9.5Z"
+              ></path>
+            </svg>
+          </a>
+
+          <a
+            class="header-arrow-group"
+            href="https://tbcconcept.ge/ge/products/kits"
+            ><svg
+              data-v-562b0aec=""
+              width="16"
+              height="16"
+              viewbox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+              class="arrow-icon"
+            >
+              <path
+                data-v-562b0aec=""
+                d="M9.7987 2.86675L14.4654 7.53341C14.732 7.80008 14.732 8.20008 14.4654 8.46675L9.7987 13.1334C9.53203 13.4001 9.13203 13.4001 8.86537 13.1334C8.5987 12.8667 8.5987 12.4667 8.86537 12.2001L12.3987 8.66675H1.9987C1.5987 8.66675 1.33203 8.40008 1.33203 8.00008C1.33203 7.60008 1.5987 7.33341 1.9987 7.33341H12.3987L8.86537 3.80008C8.73203 3.66675 8.66536 3.53341 8.66536 3.33341C8.66536 3.13341 8.73203 3.00008 8.86537 2.86675C9.13203 2.60008 9.53203 2.60008 9.7987 2.86675Z"
+              ></path>
+            </svg>
+            გამოიწერეთ ნაკრები</a
+          >
+          <div class="burger-icon">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+
+          <div class="language-div">
+            <div>
+              <img src="images/earth.svg" alt="earth icon" />
+              <p>ქარ</p>
+            </div>
+            <div>Eng</div>
+          </div>
+        </div>
+        <div class="overlay"></div>
       </div>
-      <div class="overlay"></div>
     </header>
 
-    <section class="desktop-menu">
+    <section class="desktop-menu container-padding">
       <nav>
         <div class="digital-bank-desktop-menu-div">
           <a href="https://tbconline.ge/tbcrd/login?t=false">
@@ -306,9 +323,11 @@
     </section>
 
     <main>
-      <div class="navigate-main-div">
-        <img src="images/left-arrow.svg" alt="arrow" class="left-arrow" />
-        <p>მთავარი</p>
+      <div class="container-padding">
+        <div class="navigate-main-div">
+          <img src="images/left-arrow.svg" alt="arrow" class="left-arrow" />
+          <p>მთავარი</p>
+        </div>
       </div>
 
       <div class="menu-trigger">
@@ -361,32 +380,38 @@
         </a>
       </div>
 
-      <div class="hero-block">
-        <img src="images/hero-image.webp" alt="hero image" class="hero-image" />
-        <div class="hero-data">
-          <h2>თიბისი კონცეპტი</h2>
-          <p>
-            პერსონალური საბანკო მომსახურება, მორგებული თქვენს საწირეობებსა და
-            ინტერესებზე
-          </p>
-          <a href="https://tbcconcept.ge/ge/products/kits">
-            <button>
-              <svg
-                data-v-562b0aec=""
-                width="16"
-                height="16"
-                viewbox="0 0 16 16"
-                fill="#fff"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
+      <div class="hero-block-wrapper container-padding">
+        <div class="hero-block container-padding">
+          <img
+            src="images/hero-image.webp"
+            alt="hero image"
+            class="hero-image"
+          />
+          <div class="hero-data">
+            <h2>თიბისი კონცეპტი</h2>
+            <p>
+              პერსონალური საბანკო მომსახურება, მორგებული თქვენს საწირეობებსა და
+              ინტერესებზე
+            </p>
+            <a href="https://tbcconcept.ge/ge/products/kits">
+              <button>
+                <svg
                   data-v-562b0aec=""
-                  d="M9.7987 2.86675L14.4654 7.53341C14.732 7.80008 14.732 8.20008 14.4654 8.46675L9.7987 13.1334C9.53203 13.4001 9.13203 13.4001 8.86537 13.1334C8.5987 12.8667 8.5987 12.4667 8.86537 12.2001L12.3987 8.66675H1.9987C1.5987 8.66675 1.33203 8.40008 1.33203 8.00008C1.33203 7.60008 1.5987 7.33341 1.9987 7.33341H12.3987L8.86537 3.80008C8.73203 3.66675 8.66536 3.53341 8.66536 3.33341C8.66536 3.13341 8.73203 3.00008 8.86537 2.86675C9.13203 2.60008 9.53203 2.60008 9.7987 2.86675Z"
-                ></path>
-              </svg>
-              გამოიწერეთ
-            </button>
-          </a>
+                  width="16"
+                  height="16"
+                  viewbox="0 0 16 16"
+                  fill="#fff"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    data-v-562b0aec=""
+                    d="M9.7987 2.86675L14.4654 7.53341C14.732 7.80008 14.732 8.20008 14.4654 8.46675L9.7987 13.1334C9.53203 13.4001 9.13203 13.4001 8.86537 13.1334C8.5987 12.8667 8.5987 12.4667 8.86537 12.2001L12.3987 8.66675H1.9987C1.5987 8.66675 1.33203 8.40008 1.33203 8.00008C1.33203 7.60008 1.5987 7.33341 1.9987 7.33341H12.3987L8.86537 3.80008C8.73203 3.66675 8.66536 3.53341 8.66536 3.33341C8.66536 3.13341 8.73203 3.00008 8.86537 2.86675C9.13203 2.60008 9.53203 2.60008 9.7987 2.86675Z"
+                  ></path>
+                </svg>
+                გამოიწერეთ
+              </button>
+            </a>
+          </div>
         </div>
       </div>
 
@@ -513,172 +538,190 @@
       </div>
 
       <div class="offers-div">
-        <div class="offers-text-div">
-          <h2>შეთავაზებები</h2>
-          <a href="https://tbcconcept.ge/ge/lifestyle/offers"
-            ><svg
-              class="offers-arrow"
-              data-v-562b0aec=""
-              width="16"
-              height="16"
-              viewbox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                data-v-562b0aec=""
-                d="M9.7987 2.86675L14.4654 7.53341C14.732 7.80008 14.732 8.20008 14.4654 8.46675L9.7987 13.1334C9.53203 13.4001 9.13203 13.4001 8.86537 13.1334C8.5987 12.8667 8.5987 12.4667 8.86537 12.2001L12.3987 8.66675H1.9987C1.5987 8.66675 1.33203 8.40008 1.33203 8.00008C1.33203 7.60008 1.5987 7.33341 1.9987 7.33341H12.3987L8.86537 3.80008C8.73203 3.66675 8.66536 3.53341 8.66536 3.33341C8.66536 3.13341 8.73203 3.00008 8.86537 2.86675C9.13203 2.60008 9.53203 2.60008 9.7987 2.86675Z"
-              ></path>
-            </svg>
-            ყველა შეთავაზება</a
-          >
+        <h2>შეთავაზებები</h2>
+        <div class="swiper offers-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide offers-slide">
+              <a
+                href="https://tbcconcept.ge/ge/lifestyle/offers/singleview/4564-"
+              >
+                <div class="offers-inside-div">
+                  <img
+                    src="images/mp-development.png"
+                    alt="mp development image"
+                    class="offers-image"
+                  />
+                  <div class="small-image-div">
+                    <img
+                      src="images/mp-development-logo.jpg"
+                      alt="mp development logo"
+                      class="logo"
+                    />
+                  </div>
+                  <div class="offers-inside-text-div">
+                    <div>
+                      <p>ინვესტიციები</p>
+                    </div>
+                    <h3>MP დეველოპმენტი - აშშ და ევროს ობლიგაციები</h3>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide offers-slide">
+              <a
+                href="https://tbcconcept.ge/ge/lifestyle/offers/singleview/4563-"
+              >
+                <div class="offers-inside-div">
+                  <img
+                    src="images/iveria.jpg"
+                    alt="iveria image"
+                    class="offers-image"
+                  />
+                  <div class="small-image-div">
+                    <img
+                      src="images/iveria-logo.png"
+                      alt="iveria logo"
+                      class="logo"
+                    />
+                  </div>
+                  <div class="offers-inside-text-div">
+                    <div>
+                      <p>ჯაზ ფესტივალის შეთავაზებები</p>
+                    </div>
+                    <h3>IVERIA BEACH - დაიბრუნეთ 30%</h3>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide offers-slide">
+              <a
+                href="https://tbcconcept.ge/ge/lifestyle/offers/singleview/4561-"
+              >
+                <div class="offers-inside-div">
+                  <img
+                    src="images/tegeta-cars.png"
+                    alt="tegeta image"
+                    class="offers-image"
+                  />
+                  <div class="small-image-div">
+                    <img
+                      src="images/tegeta-small.png"
+                      alt="tegeta logo"
+                      class="logo"
+                    />
+                  </div>
+                  <div class="offers-inside-text-div">
+                    <div>
+                      <p>ავტო</p>
+                      <p>თეგეტა მოტორსი</p>
+                    </div>
+                    <h3>თეგეტა მოტორსი - 50% ფასდაკლება</h3>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide offers-slide">
+              <a
+                href="https://tbcconcept.ge/ge/lifestyle/offers/singleview/4560-"
+              >
+                <div class="offers-inside-div">
+                  <img
+                    src="images/tegeta-building.png"
+                    alt="tegeta image"
+                    class="offers-image"
+                  />
+                  <div class="small-image-div">
+                    <img
+                      src="images/tegeta-small.png"
+                      alt="tegeta logo"
+                      class="logo"
+                    />
+                  </div>
+                  <div class="offers-inside-text-div">
+                    <div>
+                      <p>ავტო</p>
+                      <p>ჯაზ ფესტივალის შეთავაზებები</p>
+                      <p>თეგეტა მოტორსი</p>
+                    </div>
+                    <h3>თეგეტა მოტორსი - ბათუმი</h3>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide offers-slide">
+              <a
+                href="https://tbcconcept.ge/ge/lifestyle/offers/singleview/4559-lemeridien"
+              >
+                <div class="offers-inside-div">
+                  <img
+                    src="images/le-meridien.png"
+                    alt="le meridien image"
+                    class="offers-image"
+                  />
+                  <div class="small-image-div">
+                    <img
+                      src="images/le-meridien-logo.png"
+                      alt="le meridien logo"
+                      class="logo"
+                    />
+                  </div>
+                  <div class="offers-inside-text-div">
+                    <div>
+                      <p>დასვენება</p>
+                      <p>ვიზა</p>
+                      <p>ჯაზ ფესტივალის შეთავაზებები</p>
+                    </div>
+                    <h3>Le Meridien Batumi - 15%-იანი ფასდაკლება</h3>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide offers-slide">
+              <a
+                href="https://tbcconcept.ge/ge/lifestyle/offers/singleview/4558-colosseum"
+              >
+                <div class="offers-inside-div">
+                  <img
+                    src="images/colosseum.png"
+                    alt="colosseum image"
+                    class="offers-image"
+                  />
+                  <div class="small-image-div">
+                    <img
+                      src="images/colosseum-logo.png"
+                      alt="colosseum logo"
+                      class="logo"
+                    />
+                  </div>
+                  <div class="offers-inside-text-div">
+                    <div>
+                      <p>დასვენება</p>
+                      <p>ვიზა</p>
+                    </div>
+                    <h3>Colosseum Marina Hotel - 15%-იანი ფასდაკლება</h3>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-scrollbar offers-swiper-scrollbar"></div>
         </div>
-        <div class="offers-slider slider-container">
-          <div class="offers-slide slide">
-            <a
-              href="https://tbcconcept.ge/ge/lifestyle/offers/singleview/4563-"
-            >
-              <div class="offers-inside-div">
-                <img
-                  src="images/iveria.jpg"
-                  alt="iveria image"
-                  class="offers-image"
-                />
-                <div class="small-image-div">
-                  <img
-                    src="images/iveria-logo.png"
-                    alt="iveria logo"
-                    class="logo"
-                  />
-                </div>
-                <div class="offers-inside-text-div">
-                  <div>
-                    <p>ჯაზ ფესტივალის შეთავაზებები</p>
-                  </div>
-                  <h3>IVERIA BEACH - დაიბრუნეთ 30%</h3>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="offers-slide slide">
-            <a
-              href="https://tbcconcept.ge/ge/lifestyle/offers/singleview/4561-"
-            >
-              <div class="offers-inside-div">
-                <img
-                  src="images/tegeta-cars.png"
-                  alt="tegeta image"
-                  class="offers-image"
-                />
-                <div class="small-image-div">
-                  <img
-                    src="images/tegeta-small.png"
-                    alt="tegeta logo"
-                    class="logo"
-                  />
-                </div>
-                <div class="offers-inside-text-div">
-                  <div>
-                    <p>ავტო</p>
-                    <p>თეგეტა მოტორსი</p>
-                  </div>
-                  <h3>თეგეტა მოტორსი - 50% ფასდაკლება</h3>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="offers-slide slide">
-            <a
-              href="https://tbcconcept.ge/ge/lifestyle/offers/singleview/4560-"
-            >
-              <div class="offers-inside-div">
-                <img
-                  src="images/tegeta-building.png"
-                  alt="tegeta image"
-                  class="offers-image"
-                />
-                <div class="small-image-div">
-                  <img
-                    src="images/tegeta-small.png"
-                    alt="tegeta logo"
-                    class="logo"
-                  />
-                </div>
-                <div class="offers-inside-text-div">
-                  <div>
-                    <p>ავტო</p>
-                    <p>ჯაზ ფესტივალის შეთავაზებები</p>
-                    <p>თეგეტა მოტორსი</p>
-                  </div>
-                  <h3>თეგეტა მოტორსი - ბათუმი</h3>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="offers-slide slide">
-            <a
-              href="https://tbcconcept.ge/ge/lifestyle/offers/singleview/4559-lemeridien"
-            >
-              <div class="offers-inside-div">
-                <img
-                  src="images/le-meridien.png"
-                  alt="le meridien image"
-                  class="offers-image"
-                />
-                <div class="small-image-div">
-                  <img
-                    src="images/le-meridien-logo.png"
-                    alt="mp development logo"
-                    class="logo"
-                  />
-                </div>
-                <div class="offers-inside-text-div">
-                  <div>
-                    <p>დასვენება</p>
-                    <p>ვიზა</p>
-                    <p>ჯაზ ფესტივალის შეთავაზებები</p>
-                  </div>
-                  <h3>Le Meridien Batumi - 15%-იანი ფასდაკლება</h3>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="offers-slide slide">
-            <a
-              href="https://tbcconcept.ge/ge/lifestyle/offers/singleview/4558-colosseum"
-            >
-              <div class="offers-inside-div">
-                <img
-                  src="images/colosseum.png"
-                  alt="colosseum image"
-                  class="offers-image"
-                />
-                <div class="small-image-div">
-                  <img
-                    src="images/colosseum-logo.png"
-                    alt="colosseum logo"
-                    class="logo"
-                  />
-                </div>
-                <div class="offers-inside-text-div">
-                  <div>
-                    <p>დასვენება</p>
-                    <p>ვიზა</p>
-                  </div>
-                  <h3>Colosseum Marina Hotel - 15%-იანი ფასდაკლება</h3>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <!-- <div class="indicator-container">
-          <div class="indicator"></div>
-        </div> -->
       </div>
+
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script>
+        const offersSwiper = new Swiper(".offers-slider", {
+          slidesPerView: "auto",
+          spaceBetween: 15,
+          centeredSlides: false,
+          grabCursor: true,
+          scrollbar: {
+            el: ".offers-swiper-scrollbar",
+            draggable: true,
+            hide: false,
+          },
+        });
+      </script>
 
       <div class="digital-bank-div">
         <h2>ციფრული ბანკი</h2>
@@ -692,87 +735,101 @@
           </p>
           <a
             href="https://play.google.com/store/apps/details?id=com.icomvision.bsc.tbc&hl=en"
-            target="_blank"
           >
-            <div class="download-button">
+            <button class="download-button">
               <img src="images/download.svg" alt="download icon" /> DOWNLOAD
-            </div>
+            </button>
           </a>
         </div>
       </div>
 
       <div class="products-div">
         <h2>პროდუქტები</h2>
-        <div class="products-slider slider-container">
-          <a href="https://tbcconcept.ge/ge/singleview/245-digital-kit">
-            <div class="products-slide slide">
-              <div class="products-inside-div">
-                <img
-                  src="images/digital-image.png"
-                  alt="digital image"
-                  class="products-image"
-                />
-                <div class="products-text-div">
-                  <h3>ციფრული</h3>
-                  <p>
-                    თიბისი კონცეპტის ციფრული ნაკრები განკუთვნილია მათთვის,
-                    ვისთვისაც
-                    <span
-                      >საბანკო მომსახურებით სარგებლობა ყოველდღიურობის
-                      ნაწილია,</span
-                    >
-                    ვინც
-                  </p>
+        <div class="swiper products-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide products-slide">
+              <a href="https://tbcconcept.ge/ge/singleview/245-digital-kit">
+                <div class="products-inside-div">
+                  <img
+                    src="images/digital-image.png"
+                    alt="digital image"
+                    class="products-image"
+                  />
+                  <div class="products-text-div">
+                    <h3>ციფრული</h3>
+                    <p>
+                      თიბისი კონცეპტის ციფრული ნაკრები განკუთვნილია მათთვის,
+                      ვისთვისაც
+                      <span
+                        >საბანკო მომსახურებით სარგებლობა ყოველდღიურობის
+                        ნაწილია,</span
+                      >
+                      ვინც
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
-          </a>
 
-          <a href="https://tbcconcept.ge/ge/singleview/3300-premium-kit">
-            <div class="products-slide slide">
-              <div class="products-inside-div">
-                <img
-                  src="images/premium-image.png"
-                  alt="premium image"
-                  class="products-image"
-                />
-                <div class="products-text-div">
-                  <h3>პრემიუმი</h3>
-                  <p>
-                    თიბისი კონცეპტის მომხმარებლებთან ურთიერთობის ერთ-ერთი
-                    ფორმატი -
-                    <span>პრემიუმ ნაკრები, </span>
-                    სხვა საბანკო და არასაბანკ...
-                  </p>
+            <div class="swiper-slide products-slide">
+              <a href="https://tbcconcept.ge/ge/singleview/3300-premium-kit">
+                <div class="products-inside-div">
+                  <img
+                    src="images/premium-image.png"
+                    alt="premium image"
+                    class="products-image"
+                  />
+                  <div class="products-text-div">
+                    <h3>პრემიუმი</h3>
+                    <p>
+                      თიბისი კონცეპტის მომხმარებლებთან ურთიერთობის ერთ-ერთი
+                      ფორმატი -
+                      <span>პრემიუმ ნაკრები, </span>
+                      სხვა საბანკო და არასაბანკ...
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
-          </a>
 
-          <a href="https://tbcconcept.ge/ge/singleview/3301-concept-360">
-            <div class="products-slide slide">
-              <div class="products-inside-div">
-                <img
-                  src="images/360-image.png"
-                  alt="360 image"
-                  class="products-image"
-                />
-                <div class="products-text-div">
-                  <h3>360</h3>
-                  <p>
-                    <span>თიბისი კონცეპტის 360</span>
-                    ნაკრები განკუთვნილია მათთვის, ვისაც სხვა საბანკო და
-                    არასაბანკო უპირატესობებთან ერთად, კიდევ...
-                  </p>
+            <div class="swiper-slide products-slide">
+              <a href="https://tbcconcept.ge/ge/singleview/3301-concept-360">
+                <div class="products-inside-div">
+                  <img
+                    src="images/360-image.png"
+                    alt="360 image"
+                    class="products-image"
+                  />
+                  <div class="products-text-div">
+                    <h3>360</h3>
+                    <p>
+                      <span>თიბისი კონცეპტის 360</span>
+                      ნაკრები განკუთვნილია მათთვის, ვისაც სხვა საბანკო და
+                      არასაბანკო უპირატესობებთან ერთად, კიდევ...
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
-          </a>
+          </div>
+          <div class="swiper-scrollbar products-swiper-scrollbar"></div>
         </div>
-        <!-- <div class="indicator-container">
-          <div class="indicator"></div>
-        </div> -->
       </div>
+
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script>
+        const productsSwiper = new Swiper(".products-slider", {
+          slidesPerView: "auto",
+          spaceBetween: 15,
+          centeredSlides: false,
+          grabCursor: true,
+          scrollbar: {
+            el: ".products-swiper-scrollbar",
+            draggable: true,
+            hide: false,
+          },
+        });
+      </script>
 
       <div class="hero-block">
         <img
@@ -789,53 +846,80 @@
         </div>
       </div>
 
-      <div class="reward-div rewards-container">
+      <div class="reward-div">
         <h2>ჯილდოები</h2>
-        <div class="rewards-slider slider-container">
-          <div class="rewards-slide slide">
-            <img
-              src="images/global-finance-image.png"
-              alt="global finance image"
-              class="reward-img"
-            />
-            <h3>საუკეთესო პერსონალური საბანკო მომსახურება საქართველოში 2024</h3>
-            <p>The Global Finance</p>
+        <div class="reward-swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide reward-slide">
+              <img
+                src="images/global-finance-image.png"
+                alt="global finance image"
+                class="reward-img"
+              />
+              <h3>
+                საუკეთესო პერსონალური საბანკო მომსახურება საქართველოში 2024
+              </h3>
+              <p>The Global Finance</p>
+            </div>
+            <div class="swiper-slide reward-slide">
+              <img
+                src="images/euromoney.png"
+                alt="euromoney image"
+                class="reward-img"
+              />
+              <h3>
+                საუკეთესო პერსონალური საბანკო მომსახურება საქართველოში 2023
+              </h3>
+              <p>Euromoney</p>
+            </div>
+            <div class="swiper-slide reward-slide">
+              <img
+                src="images/global-finance-image.png"
+                alt="global finance image"
+                class="reward-img"
+              />
+              <h3>
+                საუკეთესო პერსონალური საბანკო მომსახურება საქართველოში 2022
+              </h3>
+              <p>The Global Finance</p>
+            </div>
+            <div class="swiper-slide reward-slide">
+              <img
+                src="images/the-banker.png"
+                alt="the banker image"
+                class="reward-img"
+              />
+              <h3>
+                საუკეთესო პერსონალური საბანკო მომსახურება საქართველოში 2021
+              </h3>
+              <p>The Banker & PWM</p>
+            </div>
           </div>
-
-          <div class="rewards-slide slide">
-            <img
-              src="images/euromoney.png"
-              alt="eyromoney image"
-              class="reward-img"
-            />
-            <h3>საუკეთესო პერსონალური საბანკო მომსახურება საქართველოში 2023</h3>
-            <p>Euromoney</p>
-          </div>
-
-          <div class="rewards-slide slide">
-            <img
-              src="images/global-finance-image.png"
-              alt="global finance image"
-              class="reward-img"
-            />
-            <h3>საუკეთესო პერსონალური საბანკო მომსახურება საქართველოში 2022</h3>
-            <p>The Global Finance</p>
-          </div>
-
-          <div class="rewards-slide slide">
-            <img
-              src="images/the-banker.png"
-              alt="the banker image"
-              class="reward-img"
-            />
-            <h3>საუკეთესო პერსონალური საბანკო მომსახურება საქართველოში 2021</h3>
-            <p>The Banker & PWM</p>
-          </div>
+          <div class="swiper-scrollbar reward-swiper-scrollbar"></div>
         </div>
-        <!-- <div class="indicator-container">
-          <div class="indicator rewards-indicator"></div>
-        </div> -->
       </div>
+
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script>
+        const rewardSwiper = new Swiper(".reward-swiper-container", {
+          slidesPerView: 1.2,
+          height: 360,
+          spaceBetween: 15,
+          centeredSlides: false,
+          grabCursor: true,
+          scrollbar: {
+            el: ".reward-swiper-scrollbar",
+            draggable: true,
+            hide: false,
+          },
+          breakpoints: {
+            // when window width is >= 480px
+            600: {
+              slidesPerView: 2.1,
+            },
+          },
+        });
+      </script>
     </main>
 
     <footer>

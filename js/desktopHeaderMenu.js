@@ -1,11 +1,5 @@
-const productTitle = document.querySelector(
-  ".desktop-header-menu-product-title"
-);
-const offerTitle = document.querySelector(".desktop-header-menu-offer-title");
-const conceptSpaceTitle = document.querySelector(
-  ".desktop-header-menu-concept-title"
-);
-
+const menuItems = document.querySelectorAll(".desktop-header-menu-item");
+const menuLines = document.querySelectorAll(".menu-line");
 const desktopMenu = document.querySelector(".desktop-menu");
 const digitalBankMenu = document.querySelector(
   ".digital-bank-desktop-menu-div"
@@ -16,59 +10,33 @@ const conceptSpaceMenu = document.querySelector(
   ".concept-space-desktop-menu-div"
 );
 
-function openMenu(menu, title) {
-  closeMenus();
-  desktopMenu.style.display = "block";
-  digitalBankMenu.style.display = "block";
-  menu.style.display = "flex";
-  title.style.borderBottom = "2px solid #182cc0";
-}
+const menuMap = {
+  0: productsMenu,
+  1: offersMenu,
+  2: conceptSpaceMenu,
+};
+
+menuItems.forEach((menuItem, index) => {
+  menuItem.addEventListener("click", () => {
+    closeMenus();
+    desktopMenu.style.display = "block";
+    const line = menuItem.querySelector(".menu-line");
+    line.classList.add("menu-line_opened");
+    menuMap[index].style.opacity = "100%";
+  });
+});
 
 function closeMenus() {
   desktopMenu.style.display = "none";
-  digitalBankMenu.style.display = "none";
-  productsMenu.style.display = "none";
-  offersMenu.style.display = "none";
-  conceptSpaceMenu.style.display = "none";
-  productTitle.style.borderBottom = "none";
-  offerTitle.style.borderBottom = "none";
-  conceptSpaceTitle.style.borderBottom = "none";
+  menuLines.forEach((line, index) => {
+    line.classList.remove("menu-line_opened");
+    menuMap[index].style.opacity = "0";
+  });
 }
-
-productTitle.addEventListener("click", () => {
-  if (productsMenu.style.display === "flex") {
-    closeMenus();
-  } else {
-    openMenu(productsMenu, productTitle);
-  }
-});
-
-offerTitle.addEventListener("click", () => {
-  if (offersMenu.style.display === "flex") {
-    closeMenus();
-  } else {
-    openMenu(offersMenu, offerTitle);
-  }
-});
-
-conceptSpaceTitle.addEventListener("click", () => {
-  if (conceptSpaceMenu.style.display === "flex") {
-    closeMenus();
-  } else {
-    openMenu(conceptSpaceMenu, conceptSpaceTitle);
-  }
-});
 
 document.addEventListener("click", (event) => {
   const isClickInsideMenu =
-    desktopMenu.contains(event.target) ||
-    digitalBankMenu.contains(event.target) ||
-    productsMenu.contains(event.target) ||
-    offersMenu.contains(event.target) ||
-    conceptSpaceMenu.contains(event.target) ||
-    productTitle.contains(event.target) ||
-    offerTitle.contains(event.target) ||
-    conceptSpaceTitle.contains(event.target);
+    desktopMenu.contains(event.target) || header.contains(event.target);
 
   if (!isClickInsideMenu) {
     closeMenus();
