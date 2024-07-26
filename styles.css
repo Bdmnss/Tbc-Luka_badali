@@ -261,6 +261,7 @@ header {
 
 .overlay {
   display: none;
+  cursor: pointer;
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -643,7 +644,7 @@ main {
 }
 
 .offers-slider {
-  height: 330px;
+  height: 360px;
   display: flex !important;
   overflow: hidden !important;
   padding-bottom: 20px !important;
@@ -732,6 +733,10 @@ main {
   font-weight: 600;
 }
 
+.android-apple-download-div {
+  display: none;
+}
+
 /* ********************* */
 /* პროდუქტების სტილები */
 /* ******************* */
@@ -784,7 +789,7 @@ main {
 }
 
 .products-slider {
-  height: 380px;
+  height: 400px;
   display: flex !important;
   overflow: hidden !important;
   padding-block: 0 20px !important;
@@ -1023,6 +1028,7 @@ footer {
 }
 
 .social-btn {
+  cursor: pointer;
   border: none;
   padding: 15px;
   border-radius: 5px;
@@ -1102,11 +1108,17 @@ footer {
 }
 
 .privacy-menu-close-div {
+  cursor: pointer;
   background-color: #f0f0f0;
   border-radius: 50%;
   padding: 3px;
   display: flex;
   align-items: center;
+}
+
+.privacy-menu-close-div:hover {
+  background-color: #f9fafa;
+  transition: background-color 0.5s ease;
 }
 
 .privacy-text-div {
@@ -1246,11 +1258,17 @@ th {
 }
 
 .rules-menu-close-div {
+  cursor: pointer;
   background-color: #f0f0f0;
   border-radius: 50%;
   padding: 3px;
   display: flex;
   align-items: center;
+}
+
+.rules-menu-close-div:hover {
+  background-color: #f9fafa;
+  transition: background-color 0.5s ease;
 }
 
 @media only screen and (min-width: 480px) {
@@ -1338,7 +1356,7 @@ th {
   }
 
   .offers-slider {
-    height: 370px;
+    height: 400px;
   }
 
   .digital-bank-div {
@@ -1629,10 +1647,6 @@ th {
 
   .download-button {
     width: 35%;
-  }
-
-  .android-apple-download-div {
-    display: none;
   }
 
   .products-text-div {
@@ -1969,6 +1983,23 @@ th {
   }
   .offers-text-div > * {
     padding: 0;
+  }
+
+  .scrollable-content {
+    max-width: 1110px;
+    margin-inline: auto;
+  }
+
+  .privacy-menu-header-div {
+    justify-content: space-evenly;
+  }
+  .rules-menu-text-div {
+    max-width: 755px;
+    margin-inline: auto;
+  }
+
+  .rules-menu-header-div {
+    justify-content: space-evenly;
   }
 }
 
