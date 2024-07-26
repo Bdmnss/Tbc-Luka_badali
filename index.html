@@ -12,6 +12,7 @@
     <script src="./js/privacyMenu.js" defer></script>
     <script src="./js/rulesMenu.js" defer></script>
     <script src="./js/slider.js" defer></script>
+    <script src="./js/desktopHeaderMenu.js" defer></script>
   </head>
   <body>
     <header>
@@ -27,6 +28,13 @@
           class="tbc-concept-large"
         />
       </div>
+
+      <div class="desktop-header-menu">
+        <div class="desktop-header-menu-product-title">პროდუქტები</div>
+        <div class="desktop-header-menu-offer-title">შეთავაზებები</div>
+        <div class="desktop-header-menu-concept-title">კონსეპტის სივრცე</div>
+      </div>
+
       <div class="header-tools-div">
         <a href="https://tbcconcept.ge/ge/search"
           ><svg
@@ -67,9 +75,77 @@
           <div></div>
           <div></div>
         </div>
+
+        <div class="language-div">
+          <div>
+            <img src="images/earth.svg" alt="earth icon" />
+            <p>ქარ</p>
+          </div>
+          <div>Eng</div>
+        </div>
       </div>
       <div class="overlay"></div>
     </header>
+
+    <section class="desktop-menu">
+      <nav>
+        <div class="digital-bank-desktop-menu-div">
+          <a href="https://tbconline.ge/tbcrd/login?t=false">
+            <img
+              src="images/digital-bank-desktop-menu-image.png"
+              alt="digital bank image"
+            />
+            <div class="desktop-menu-digital-bank-text">
+              <svg
+                data-v-562b0aec=""
+                width="20"
+                height="21"
+                viewbox="0 0 20 21"
+                fill="#182CC0"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  data-v-562b0aec=""
+                  d="M15.8342 4.04761H7.50091C7.04258 4.04761 6.66758 4.42261 6.66758 4.88094C6.66758 5.33927 7.04258 5.71427 7.50091 5.71427H13.8259L3.57578 15.9643C3.25078 16.2893 3.25078 16.8143 3.57578 17.1393C3.74245 17.3059 3.95078 17.3809 4.16744 17.3809C4.38411 17.3809 4.59244 17.2976 4.75911 17.1393L15.0009 6.88927V13.2143C15.0009 13.6726 15.3759 14.0476 15.8342 14.0476C16.2925 14.0476 16.6675 13.6726 16.6675 13.2143V4.88094C16.6675 4.42261 16.2925 4.04761 15.8342 4.04761Z"
+                ></path>
+              </svg>
+              <p>ციფრული ბანკი</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="desktop-header-menu-nav">
+          <div class="products-desktop-menu-div">
+            <a href="https://tbcconcept.ge/ge/products/overview"
+              >პროდუქტების მიმოხილვა</a
+            >
+            <a href="https://tbcconcept.ge/ge/products/kits">ნაკრები</a>
+            <a href="https://tbcconcept.ge/ge/products/personalbanker"
+              >პირადი ბანკირი</a
+            >
+          </div>
+
+          <div class="offers-desktop-menu-div">
+            <a href="https://tbcconcept.ge/ge/lifestyle/overview">მიმოხილვა</a>
+            <a href="https://tbcconcept.ge/ge/lifestyle/offers">შეთავაზებები</a>
+            <a href="https://tbcconcept.ge/ge/lifestyle/events">ღონისძიებები</a>
+          </div>
+
+          <div class="concept-space-desktop-menu-div">
+            <a href="https://tbcconcept.ge/ge/concept-space/overview"
+              >მიმოხილვა</a
+            >
+            <a href="https://tbcconcept.ge/ge/concept-space/cafe">კაფე</a>
+            <a href="https://tbcconcept.ge/ge/concept-space/library"
+              >ბიბლიოთეკა</a
+            >
+            <a href="https://tbcconcept.ge/ge/concept-space/concept-branches"
+              >კონცეპტ ფილიალები</a
+            >
+          </div>
+        </div>
+      </nav>
+    </section>
 
     <section class="burger-menu">
       <nav>
@@ -459,33 +535,6 @@
         <div class="offers-slider slider-container">
           <div class="offers-slide slide">
             <a
-              href="https://tbcconcept.ge/ge/lifestyle/offers/singleview/4564-"
-            >
-              <div class="offers-inside-div">
-                <img
-                  src="images/mp-development.png"
-                  alt="mp development image"
-                  class="offers-image"
-                />
-                <div class="small-image-div">
-                  <img
-                    src="images/mp-development-logo.jpg"
-                    alt="mp development logo"
-                    class="logo"
-                  />
-                </div>
-                <div class="offers-inside-text-div">
-                  <div>
-                    <p>ინვესტიციები</p>
-                  </div>
-                  <h3>MP დეველოპმენტი - აშშ და ევროს ობლიგაციები</h3>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="offers-slide slide">
-            <a
               href="https://tbcconcept.ge/ge/lifestyle/offers/singleview/4563-"
             >
               <div class="offers-inside-div">
@@ -625,6 +674,10 @@
             </a>
           </div>
         </div>
+
+        <!-- <div class="indicator-container">
+          <div class="indicator"></div>
+        </div> -->
       </div>
 
       <div class="digital-bank-div">
@@ -639,10 +692,11 @@
           </p>
           <a
             href="https://play.google.com/store/apps/details?id=com.icomvision.bsc.tbc&hl=en"
+            target="_blank"
           >
-            <button class="download-button">
+            <div class="download-button">
               <img src="images/download.svg" alt="download icon" /> DOWNLOAD
-            </button>
+            </div>
           </a>
         </div>
       </div>
@@ -715,6 +769,9 @@
             </div>
           </a>
         </div>
+        <!-- <div class="indicator-container">
+          <div class="indicator"></div>
+        </div> -->
       </div>
 
       <div class="hero-block">
@@ -732,7 +789,7 @@
         </div>
       </div>
 
-      <div class="reward-div">
+      <div class="reward-div rewards-container">
         <h2>ჯილდოები</h2>
         <div class="rewards-slider slider-container">
           <div class="rewards-slide slide">
@@ -775,6 +832,9 @@
             <p>The Banker & PWM</p>
           </div>
         </div>
+        <!-- <div class="indicator-container">
+          <div class="indicator rewards-indicator"></div>
+        </div> -->
       </div>
     </main>
 
@@ -853,7 +913,7 @@
               class="arrow footer-arrow"
             />
           </div>
-          <div class="footer-arrow-div-content">
+          <div class="footer-arrow-div-content only">
             <a href="https://tbcconcept.ge/ge/products/kits">ნაკრები</a>
             <a href="https://tbcconcept.ge/ge/products/personalbanker"
               >პერსონალური ბანკირი</a
@@ -870,7 +930,7 @@
               class="arrow footer-arrow"
             />
           </div>
-          <div class="footer-arrow-div-content">
+          <div class="footer-arrow-div-content only">
             <a href="https://tbcconcept.ge/ge/lifestyle/offers">შეთავაზებები</a>
             <a href="https://tbcconcept.ge/ge/lifestyle/events">ღონისძიებები</a>
           </div>
@@ -885,7 +945,7 @@
               class="arrow footer-arrow"
             />
           </div>
-          <div class="footer-arrow-div-content">
+          <div class="footer-arrow-div-content only">
             <a href="https://tbcconcept.ge/ge/concept-space/library"
               >ბიბლიოთეკა</a
             >

@@ -4,6 +4,22 @@
   box-sizing: border-box;
 }
 
+/* .indicator-container {
+  margin-top: 1rem;
+  width: 93%;
+  height: 2px;
+  background-color: #d8d8d8;
+  margin: 0 15px;
+}
+
+.indicator {
+  height: 100%;
+  width: 20%;
+  background-color: #182cc0;
+  position: relative;
+  left: 0;
+} */
+
 /* ***************** */
 /* ჰედერის სტილები */
 /* *************** */
@@ -20,6 +36,22 @@ header {
   z-index: 10;
   overflow: hidden;
   transition: 0.2s;
+}
+
+.tbc-concept-mobile {
+  cursor: pointer;
+}
+
+.desktop-header-menu {
+  display: none;
+}
+
+.header-tools-div .language-div {
+  display: none;
+}
+
+.desktop-menu {
+  display: none;
 }
 
 .tbc-concept-large {
@@ -300,10 +332,9 @@ main {
 .hero-block {
   position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
   color: white;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
 }
 
 .hero-block a {
@@ -335,9 +366,11 @@ main {
   display: flex;
   flex-direction: column;
   text-align: left;
-  margin-top: 160px;
+
   gap: 15px;
   padding: 0 15px;
+  padding-top: 160px;
+  padding-bottom: 50px;
 }
 
 .hero-data h2 {
@@ -450,11 +483,12 @@ main {
   align-items: center;
   gap: 5px;
   color: white;
+  text-decoration: underline;
 }
 
 .choose-set-slider {
   display: flex;
-  overflow-x: scroll;
+  overflow-x: auto;
   gap: 15px;
   padding: 0 15px;
 }
@@ -590,11 +624,10 @@ main {
 
 .offers-slider {
   display: flex;
-  overflow-x: scroll;
+  overflow-x: auto;
   scroll-behavior: smooth;
   padding: 15px 15px;
   gap: 15px;
-  margin-bottom: 60px;
 }
 
 .offers-slide {
@@ -672,12 +705,16 @@ main {
   justify-content: center;
   gap: 5px;
   padding: 15px 20px;
-  background-color: white;
+  background-color: #f9fafa;
   color: #182cc0;
   border: 1px solid #182cc0;
   border-radius: 5px;
   cursor: pointer;
   font-weight: 600;
+}
+
+.download-button:hover {
+  border: 1px solid #d8d8d8;
 }
 
 /* ********************* */
@@ -734,7 +771,7 @@ main {
 
 .products-slider {
   display: flex;
-  overflow-x: scroll;
+  overflow-x: auto;
   padding: 0px 15px 20px 15px;
   gap: 15px;
 }
@@ -765,7 +802,6 @@ main {
 }
 
 .products-slider::-webkit-scrollbar {
-  width: 80%;
   height: 2px;
 }
 
@@ -807,14 +843,19 @@ main {
 
 .rewards-slider {
   display: flex;
-  overflow-x: scroll;
+  overflow-x: auto;
   padding: 0 15px 20px 15px;
   gap: 15px;
+  cursor: grab;
+}
+
+.rewards-slider {
+  cursor: grabbing;
 }
 
 .rewards-slide {
-  min-width: 370px;
-  height: 270px;
+  min-width: 270px;
+  height: 280px;
   background-color: white;
   padding: 25px;
   border-radius: 10px;
@@ -921,7 +962,7 @@ footer {
 }
 
 .arrow {
-  transition: transform 1s ease;
+  transition: transform 0.8s ease;
 }
 
 .arrow.isExpanded {
@@ -984,6 +1025,7 @@ footer {
 
 .social-btn {
   border: none;
+  cursor: pointer;
   padding: 15px;
   border-radius: 5px;
   transition: background-color 0.5s ease;
@@ -1242,7 +1284,8 @@ th {
 
   .hero-data {
     padding: 0 45px;
-    margin-top: 250px;
+    padding-top: 250px;
+    padding-bottom: 50px;
   }
 
   .hero-data h2 {
@@ -1434,6 +1477,7 @@ th {
 
   .tbc-concept-large {
     display: block;
+    cursor: pointer;
   }
 
   .header-tools-div {
@@ -1462,6 +1506,10 @@ th {
     gap: 10px;
   }
 
+  .hero-block {
+    padding: 0 45px;
+  }
+
   .hero-block::before {
     left: auto;
     width: 88%;
@@ -1476,8 +1524,8 @@ th {
   }
 
   .hero-data {
-    padding: 0 125px;
-    margin-top: 250px;
+    width: 84%;
+    padding: 262px 0px 50px 50px;
   }
 
   .hero-data h2 {
@@ -1490,7 +1538,7 @@ th {
   }
 
   .hero-data button {
-    width: 26%;
+    width: 27%;
   }
 
   .choose-set-slider {
@@ -1579,6 +1627,7 @@ th {
 
   .download-button {
     width: 35%;
+    font-size: 12px;
   }
 
   .products-text-div {
@@ -1623,7 +1672,7 @@ th {
     display: none;
   }
 
-  .footer-arrow-div-content {
+  .only {
     max-height: none;
     opacity: 1;
     visibility: visible;
@@ -1684,5 +1733,123 @@ th {
 
   .footer-large-tbc-logo {
     display: block;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .burger-icon {
+    display: none;
+  }
+
+  header {
+    border-bottom: 1px solid #d8d8d8;
+  }
+
+  .header-tools-div {
+    gap: 10px;
+  }
+
+  .header-tools-div .language-div {
+    display: flex;
+    gap: 10px;
+  }
+
+  .header-tools-div .language-div > div:nth-child(1) {
+    margin-bottom: 0;
+  }
+
+  .desktop-header-menu {
+    position: fixed;
+    left: 24%;
+    display: flex;
+    gap: 40px;
+  }
+
+  .desktop-header-menu div {
+    padding: 25px 0;
+    cursor: pointer;
+    font-size: 16px;
+    color: #222222;
+  }
+
+  .desktop-header-menu-nav {
+    position: fixed;
+    left: 24%;
+    display: flex;
+    gap: 12px;
+  }
+
+  .desktop-header-menu-nav div > a {
+    font-size: 16px;
+    color: #141719;
+  }
+
+  .desktop-header-menu-nav div > a:hover {
+    color: #182cc0;
+    transition: color 0.5s ease;
+  }
+
+  .desktop-menu {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    background-color: white;
+    width: 100%;
+  }
+
+  .desktop-menu nav {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    padding: 30px 0px 30px 45px;
+  }
+
+  .desktop-menu nav a {
+    text-decoration: none;
+  }
+
+  .desktop-menu-digital-bank-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .desktop-menu-digital-bank-text p {
+    font-size: 16px;
+    color: #182cc0;
+    font-weight: bold;
+  }
+
+  .desktop-menu-digital-bank-text:hover svg {
+    fill: #007aff;
+    transition: fill 0.5s ease;
+  }
+
+  .desktop-menu-digital-bank-text:hover p {
+    color: #007aff;
+    transition: color 0.5s ease;
+  }
+
+  .products-desktop-menu-div,
+  .offers-desktop-menu-div,
+  .concept-space-desktop-menu-div {
+    position: relative;
+    display: none;
+    flex-direction: column;
+    width: 135px;
+    gap: 20px;
+  }
+
+  .offers-desktop-menu-div {
+    left: 99%;
+  }
+
+  .concept-space-desktop-menu-div {
+    left: 200%;
+  }
+  .digital-bank-desktop-menu-div {
+    display: none;
   }
 }
