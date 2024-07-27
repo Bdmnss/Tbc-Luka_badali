@@ -1278,6 +1278,40 @@ th {
   transition: background-color 0.5s ease;
 }
 
+/* *************** */
+/* cookies styles */
+/* ************* */
+
+.cookies-block {
+  position: fixed;
+  bottom: 50px;
+  margin-inline: 5%;
+  width: 90%;
+  background-color: white;
+  padding-block: 20px;
+  padding-inline: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+  border-radius: 5px;
+}
+
+.cookies-accept-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+  color: #182cc0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.cookies-accept-button:hover {
+  color: #007aff;
+  transition: color 0.5s ease;
+}
+
 @media only screen and (min-width: 480px) {
   .header-tools-div a {
     font-size: 16px;
@@ -1929,12 +1963,17 @@ th {
   .number-div {
     flex-direction: row;
   }
+
+  .cookies-block {
+    max-width: 700px;
+    margin-inline: 17%;
+  }
 }
 
 @media only screen and (min-width: 1110px) {
   .subscribe-tbc-text-div p {
     max-width: 1110px;
-    margin-inline: auto;
+    margin-left: auto;
   }
 
   .choose-set-div {
@@ -2074,5 +2113,17 @@ th {
   .offers-div {
     max-width: 1200px;
     margin-inline: auto;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .cookies-block {
+    margin-inline: 23%;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .cookies-block {
+    margin-inline: 27%;
   }
 }
