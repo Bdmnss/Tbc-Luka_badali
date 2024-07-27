@@ -700,9 +700,38 @@
               </a>
             </div>
           </div>
-          <div
-            class="swiper-scrollbar offers-swiper-scrollbar scrollbar-margin-container"
-          ></div>
+          <div class="swiper-scrollbar-container">
+            <div
+              class="swiper-scrollbar offers-swiper-scrollbar scrollbar-margin-container"
+            ></div>
+            <div class="scrollbar-arrows-div">
+              <svg
+                class="scrollbar-arrow left-offer-scrollbar-arrow"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.2513 3.58331L18.0846 9.41665C18.418 9.74998 18.418 10.25 18.0846 10.5833L12.2513 16.4166C11.918 16.75 11.418 16.75 11.0846 16.4166C10.7513 16.0833 10.7513 15.5833 11.0846 15.25L15.5013 10.8333H2.5013C2.0013 10.8333 1.66797 10.5 1.66797 9.99998C1.66797 9.49998 2.0013 9.16665 2.5013 9.16665H15.5013L11.0846 4.74998C10.918 4.58331 10.8346 4.41665 10.8346 4.16665C10.8346 3.91665 10.918 3.74998 11.0846 3.58331C11.418 3.24998 11.918 3.24998 12.2513 3.58331Z"
+                ></path>
+              </svg>
+
+              <svg
+                class="scrollbar-arrow right-offer-scrollbar-arrow"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.2513 3.58331L18.0846 9.41665C18.418 9.74998 18.418 10.25 18.0846 10.5833L12.2513 16.4166C11.918 16.75 11.418 16.75 11.0846 16.4166C10.7513 16.0833 10.7513 15.5833 11.0846 15.25L15.5013 10.8333H2.5013C2.0013 10.8333 1.66797 10.5 1.66797 9.99998C1.66797 9.49998 2.0013 9.16665 2.5013 9.16665H15.5013L11.0846 4.74998C10.918 4.58331 10.8346 4.41665 10.8346 4.16665C10.8346 3.91665 10.918 3.74998 11.0846 3.58331C11.418 3.24998 11.918 3.24998 12.2513 3.58331Z"
+                ></path>
+              </svg>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -727,6 +756,47 @@
             },
           },
         });
+
+        function updateArrowColors() {
+          const { activeIndex, slides } = offersSwiper;
+          const totalSlides = slides.length;
+
+          const leftArrow = document.querySelector(
+            ".left-offer-scrollbar-arrow"
+          );
+          const rightArrow = document.querySelector(
+            ".right-offer-scrollbar-arrow"
+          );
+
+          leftArrow.classList.remove("arrow-active", "arrow-inactive");
+          rightArrow.classList.remove("arrow-active", "arrow-inactive");
+
+          if (activeIndex === 0) {
+            leftArrow.classList.add("arrow-inactive");
+            rightArrow.classList.add("arrow-active");
+          } else if (activeIndex === totalSlides - 3) {
+            rightArrow.classList.add("arrow-inactive");
+            leftArrow.classList.add("arrow-active");
+          } else {
+            leftArrow.classList.add("arrow-active");
+            rightArrow.classList.add("arrow-active");
+          }
+        }
+
+        updateArrowColors();
+
+        offersSwiper.on("slideChange", updateArrowColors);
+
+        document
+          .querySelector(".left-offer-scrollbar-arrow")
+          .addEventListener("click", () => {
+            offersSwiper.slidePrev();
+          });
+        document
+          .querySelector(".right-offer-scrollbar-arrow")
+          .addEventListener("click", () => {
+            offersSwiper.slideNext();
+          });
       </script>
 
       <div class="digital-bank-div container-padding">
@@ -930,9 +1000,39 @@
               <p>The Banker & PWM</p>
             </div>
           </div>
-          <div
-            class="swiper-scrollbar reward-swiper-scrollbar scrollbar-margin-container"
-          ></div>
+
+          <div class="swiper-scrollbar-container">
+            <div
+              class="swiper-scrollbar reward-swiper-scrollbar scrollbar-margin-container"
+            ></div>
+            <div class="scrollbar-arrows-div">
+              <svg
+                class="scrollbar-arrow left-reward-scrollbar-arrow"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.2513 3.58331L18.0846 9.41665C18.418 9.74998 18.418 10.25 18.0846 10.5833L12.2513 16.4166C11.918 16.75 11.418 16.75 11.0846 16.4166C10.7513 16.0833 10.7513 15.5833 11.0846 15.25L15.5013 10.8333H2.5013C2.0013 10.8333 1.66797 10.5 1.66797 9.99998C1.66797 9.49998 2.0013 9.16665 2.5013 9.16665H15.5013L11.0846 4.74998C10.918 4.58331 10.8346 4.41665 10.8346 4.16665C10.8346 3.91665 10.918 3.74998 11.0846 3.58331C11.418 3.24998 11.918 3.24998 12.2513 3.58331Z"
+                ></path>
+              </svg>
+
+              <svg
+                class="scrollbar-arrow right-reward-scrollbar-arrow"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.2513 3.58331L18.0846 9.41665C18.418 9.74998 18.418 10.25 18.0846 10.5833L12.2513 16.4166C11.918 16.75 11.418 16.75 11.0846 16.4166C10.7513 16.0833 10.7513 15.5833 11.0846 15.25L15.5013 10.8333H2.5013C2.0013 10.8333 1.66797 10.5 1.66797 9.99998C1.66797 9.49998 2.0013 9.16665 2.5013 9.16665H15.5013L11.0846 4.74998C10.918 4.58331 10.8346 4.41665 10.8346 4.16665C10.8346 3.91665 10.918 3.74998 11.0846 3.58331C11.418 3.24998 11.918 3.24998 12.2513 3.58331Z"
+                ></path>
+              </svg>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -957,6 +1057,47 @@
             },
           },
         });
+
+        function updateArrowColors() {
+          const { activeIndex, slides } = rewardSwiper;
+          const totalSlides = slides.length;
+
+          const leftArrow = document.querySelector(
+            ".left-reward-scrollbar-arrow"
+          );
+          const rightArrow = document.querySelector(
+            ".right-reward-scrollbar-arrow"
+          );
+
+          leftArrow.classList.remove("arrow-active", "arrow-inactive");
+          rightArrow.classList.remove("arrow-active", "arrow-inactive");
+
+          if (activeIndex === 0) {
+            leftArrow.classList.add("arrow-inactive");
+            rightArrow.classList.add("arrow-active");
+          } else if (activeIndex === totalSlides - 3) {
+            rightArrow.classList.add("arrow-inactive");
+            leftArrow.classList.add("arrow-active");
+          } else {
+            leftArrow.classList.add("arrow-active");
+            rightArrow.classList.add("arrow-active");
+          }
+        }
+
+        updateArrowColors();
+
+        rewardSwiper.on("slideChange", updateArrowColors);
+
+        document
+          .querySelector(".left-reward-scrollbar-arrow")
+          .addEventListener("click", () => {
+            rewardSwiper.slidePrev();
+          });
+        document
+          .querySelector(".right-reward-scrollbar-arrow")
+          .addEventListener("click", () => {
+            rewardSwiper.slideNext();
+          });
       </script>
     </main>
 

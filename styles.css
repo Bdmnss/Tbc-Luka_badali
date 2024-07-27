@@ -14,7 +14,7 @@
   }
 
   @media only screen and (min-width: 992px) {
-    width: 90% !important;
+    width: 85% !important;
   }
 }
 
@@ -563,6 +563,10 @@ main {
   margin-bottom: 70px;
 }
 
+.scrollbar-arrows-div {
+  display: none;
+}
+
 .offers-div h2 {
   font-size: 16px;
   color: #141719;
@@ -854,6 +858,9 @@ main {
 .reward-slide p {
   font-size: 16px;
   color: #555f62;
+}
+.reward-swiper {
+  padding-bottom: 30px !important;
 }
 
 .reward-swiper-container {
@@ -2000,6 +2007,52 @@ th {
 
   .rules-menu-header-div {
     justify-content: space-evenly;
+  }
+
+  .scrollbar-arrows-div {
+    display: flex;
+    position: absolute;
+    bottom: -3px;
+    right: 40px;
+  }
+
+  .swiper-container {
+    position: relative;
+  }
+
+  .swiper-scrollbar-container {
+    display: flex;
+    align-items: center;
+    bottom: 0;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .swiper-scrollbar {
+    flex-grow: 1;
+  }
+
+  .scrollbar-arrow {
+    cursor: pointer;
+    margin: 0 5px;
+  }
+
+  .arrow-active {
+    fill: #182cc0;
+  }
+
+  .arrow-inactive {
+    fill: #d8d8d8;
+  }
+
+  .left-offer-scrollbar-arrow,
+  .left-reward-scrollbar-arrow {
+    transform: rotate(180deg);
+  }
+
+  .right-offer-scrollbar-arrow,
+  .right-reward-scrollbar-arrow {
+    transform: rotate(0deg);
   }
 }
 
