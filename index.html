@@ -13,6 +13,7 @@
     <script src="./js/rulesMenu.js" defer></script>
     <script src="./js/desktopHeaderMenu.js" defer></script>
     <script src="/js/cookies.js" defer></script>
+    <script src="/js/contactUs.js" defer></script>
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
@@ -333,13 +334,9 @@
       <div class="menu-trigger">
         <div class="menu-trigger-options-closed-div">
           <div>
-            <a href="mailto:info@tbcconcept.ge"
-              ><div class="menu-trigger-options-inside-div">
-                <img
-                  src="images/menu-trigger-email.svg"
-                  alt="email icon"
-                /></div
-            ></a>
+            <div class="menu-trigger-options-inside-div contact-us-icon">
+              <img src="images/menu-trigger-email.svg" alt="email icon" />
+            </div>
           </div>
 
           <div>
@@ -1370,6 +1367,427 @@
       </div>
     </div>
   </body>
+
+  <section class="contact-us-section">
+    <div class="contact-us-header container-padding">
+      <h2>დაგვიკავშირდით</h2>
+      <div class="contact-us-close-div">
+        <svg
+          data-v-76c40848=""
+          viewBox="0 0 25 24"
+          fill="#555F62"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            data-v-76c40848=""
+            d="M13.9142 11.9998L18.2072 7.70676C18.5982 7.31576 18.5982 6.68376 18.2072 6.29276C17.8162 5.90176 17.1842 5.90176 16.7933 6.29276L12.5002 10.5858L8.20725 6.29276C7.81625 5.90176 7.18425 5.90176 6.79325 6.29276C6.40225 6.68376 6.40225 7.31576 6.79325 7.70676L11.0862 11.9998L6.79325 16.2928C6.40225 16.6838 6.40225 17.3158 6.79325 17.7068C6.98825 17.9018 7.24425 17.9998 7.50025 17.9998C7.75625 17.9998 8.01225 17.9018 8.20725 17.7068L12.5002 13.4138L16.7933 17.7068C16.9882 17.9018 17.2443 17.9998 17.5002 17.9998C17.7562 17.9998 18.0122 17.9018 18.2072 17.7068C18.5982 17.3158 18.5982 16.6838 18.2072 16.2928L13.9142 11.9998Z"
+            fill="#555F62"
+          ></path>
+          <mask
+            data-v-76c40848=""
+            id="mask0_124_107351"
+            maskUnits="userSpaceOnUse"
+            x="6"
+            y="5"
+            width="13"
+            height="13"
+            style="mask-type: luminance"
+          >
+            <path
+              data-v-76c40848=""
+              d="M13.9142 11.9998L18.2072 7.70676C18.5982 7.31576 18.5982 6.68376 18.2072 6.29276C17.8162 5.90176 17.1842 5.90176 16.7933 6.29276L12.5002 10.5858L8.20725 6.29276C7.81625 5.90176 7.18425 5.90176 6.79325 6.29276C6.40225 6.68376 6.40225 7.31576 6.79325 7.70676L11.0862 11.9998L6.79325 16.2928C6.40225 16.6838 6.40225 17.3158 6.79325 17.7068C6.98825 17.9018 7.24425 17.9998 7.50025 17.9998C7.75625 17.9998 8.01225 17.9018 8.20725 17.7068L12.5002 13.4138L16.7933 17.7068C16.9882 17.9018 17.2443 17.9998 17.5002 17.9998C17.7562 17.9998 18.0122 17.9018 18.2072 17.7068C18.5982 17.3158 18.5982 16.6838 18.2072 16.2928L13.9142 11.9998Z"
+              fill="white"
+            ></path>
+          </mask>
+          <g data-v-76c40848="" mask="url(#mask0_124_107351)"></g>
+        </svg>
+      </div>
+    </div>
+
+    <form class="form">
+      <p class="contact-us-text container-padding">დაგვიკავშირდით</p>
+      <div class="inputs-container container-padding">
+        <div class="input-div">
+          <label class="name-surname-label" for="name-surname-input"
+            >სახელი და გვარი <span>*</span></label
+          >
+          <input
+            type="text"
+            class="name-surname-input"
+            id="name-surname-input"
+          />
+          <p class="name-surname-error error-text">აუცილებელი ველი</p>
+        </div>
+
+        <div class="input-div">
+          <label class="number-label" for="number-input"
+            >ნომერი <span>*</span></label
+          >
+          <input type="number" class="number-input" id="number-input" />
+          <p class="number-error error-text"></p>
+        </div>
+
+        <div class="input-div">
+          <label class="email-label" for="email-input"
+            >ელ-ფოსტა <span>*</span></label
+          >
+          <input type="text" class="email-input" id="email-input" />
+          <p class="email-error error-text"></p>
+        </div>
+
+        <div class="input-div">
+          <label class="company-label" for="company-input">კომპანია</label>
+          <input type="text" class="company-input" id="company-input" />
+        </div>
+
+        <div class="input-div">
+          <label class="textarea-label" for="textarea-input"
+            >ტექსტი <span>*</span></label
+          >
+          <textarea type="text" class="textarea" id="textarea"></textarea>
+          <p class="textarea-error error-text">აუცილებელი ველი</p>
+        </div>
+      </div>
+      <div class="checkbox-div container-padding">
+        <input type="checkbox" id="checkbox" />
+        <span
+          ><label for="checkbox">ვეთანხმები </label
+          ><span class="contact-us-rules">წესებსა და პირობებს</span></span
+        >
+      </div>
+
+      <div class="contact-us-button-div container-padding">
+        <button class="contact-us-button" disabled>
+          <svg
+            data-v-e6dc0f1c=""
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              data-v-e6dc0f1c=""
+              d="M9.7987 2.86675L14.4654 7.53341C14.732 7.80008 14.732 8.20008 14.4654 8.46675L9.7987 13.1334C9.53203 13.4001 9.13203 13.4001 8.86537 13.1334C8.5987 12.8667 8.5987 12.4667 8.86537 12.2001L12.3987 8.66675H1.9987C1.5987 8.66675 1.33203 8.40008 1.33203 8.00008C1.33203 7.60008 1.5987 7.33341 1.9987 7.33341H12.3987L8.86537 3.80008C8.73203 3.66675 8.66536 3.53341 8.66536 3.33341C8.66536 3.13341 8.73203 3.00008 8.86537 2.86675C9.13203 2.60008 9.53203 2.60008 9.7987 2.86675Z"
+            ></path>
+          </svg>
+          გაგზავნა
+        </button>
+      </div>
+    </form>
+
+    <div class="success-div container-padding">
+      <img src="images/success-img.svg" alt="success image" />
+      <div>
+        <h2>წერილი წარმატებით გაიგზავნა</h2>
+        <p>დაგიკავშირდებით</p>
+      </div>
+    </div>
+
+    <div class="contact-us-rules-div container-padding">
+      <div class="contact-us-back-button">
+        <svg
+          data-v-e6dc0f1c=""
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            data-v-e6dc0f1c=""
+            d="M8.90835 11.3328C8.73369 11.3328 8.55969 11.2648 8.42902 11.1295L5.85369 8.46285C5.60169 8.20085 5.60502 7.78552 5.86235 7.52818L8.52902 4.86152C8.78902 4.60085 9.21102 4.60085 9.47169 4.86152C9.73169 5.12218 9.73169 5.54352 9.47169 5.80418L7.26835 8.00752L9.38769 10.2028C9.64369 10.4682 9.63635 10.8902 9.37169 11.1455C9.24169 11.2708 9.07502 11.3328 8.90835 11.3328Z"
+          ></path>
+          <mask
+            data-v-e6dc0f1c=""
+            id="mask0_124_107092"
+            maskUnits="userSpaceOnUse"
+            x="5"
+            y="4"
+            width="5"
+            height="8"
+            style="mask-type: luminance"
+          >
+            <path
+              data-v-e6dc0f1c=""
+              d="M8.90835 11.3328C8.73369 11.3328 8.55969 11.2648 8.42902 11.1295L5.85369 8.46285C5.60169 8.20085 5.60502 7.78552 5.86235 7.52818L8.52902 4.86152C8.78902 4.60085 9.21102 4.60085 9.47169 4.86152C9.73169 5.12218 9.73169 5.54352 9.47169 5.80418L7.26835 8.00752L9.38769 10.2028C9.64369 10.4682 9.63635 10.8902 9.37169 11.1455C9.24169 11.2708 9.07502 11.3328 8.90835 11.3328Z"
+            ></path>
+          </mask>
+          <g data-v-e6dc0f1c="" mask="url(#mask0_124_107092)"></g>
+        </svg>
+        უკან
+      </div>
+
+      <div class="contact-us-terms-and-conditions-div">
+        <h3>Terms and Contiditons</h3>
+        <strong>Terms and Conditions</strong>
+        <p>
+          The use of this website shall be governed by the Rules and Conditions
+          set by TBC Bank JSC (identification number: 204854595, address: #7 K.
+          Marjanishvili str. Tbilisi).
+        </p>
+
+        <p>
+          The terms "Bank" and "We" imply TBC Bank JSC (also its group member
+          companies, subsidiaries, affiliated companies). The terms "You" and
+          "Customer" mean an individual, organization using the Bank's website:
+          <a href="https://www.tbcbank.ge/web/en/web/guest/personal-banking"
+            >www.tbcbank.ge.</a
+          >
+        </p>
+
+        <p>
+          We request that you read these Rules and Conditions carefully, which
+          will regulate the usage of the website by you. If you do not agree
+          with this Rules and Conditions, please, leave the Bank's website. By
+          visiting the website or using the information published thereon, you
+          confirm and fully agree with all the specified covenants, subject to
+          unilateral change by the TBC Bank JSC at regular intervals, which will
+          be depicted on this website and your visit thereto means your approval
+          of relevant conditions.
+        </p>
+
+        <p>
+          The information published on the Bank's website is mostly intended for
+          those interested in receiving the Georgian financial market services.
+          The information published on the website may not be available in all
+          geographical areas of the world if so decided by the Bank. For
+          analyzing the information published on the Bank's website, you may
+          need to consult with an expert in a relevant field. Particular
+          products/services specified on the Bank's website shall be governed by
+          specific bank service agreements.
+        </p>
+
+        <strong>Accuracy of Information</strong>
+
+        <p>
+          The Bank shall not be responsible for the accuracy of the information
+          published on the website despite our efforts to supply you with
+          truthful information. This representation is not a confirmation or an
+          assurance that the information published on the website is accurate,
+          truthful and adequate for any type of application. Any information
+          published on the Bank's website is specified as on an "As Is" basis.
+          Therefore, the use of any information published on the website is
+          totally related to the User's personal risk and the bank is not
+          responsible for the damage caused by the use of the information
+          published on the website. This agreement does not apply to the
+          constituent parts of the agreement published on the Bank's website.
+          The information published on the website shall not be deemed a promise
+          for a service/product or any ground for restricting the Bank by any
+          type of contractual relations.
+        </p>
+
+        <strong>Limitation of Responsibility</strong>
+
+        <p>
+          The Bank and its relevant staff shall not be held responsible for the
+          actual effect, covering direct, indirect, special, accidental,
+          cause-effect, non-contractual damage, caused by the use of the
+          information published on the website.
+        </p>
+        <p>
+          The Bank shall not be held responsible for any damage or loss caused
+          by the use of the website, even in case of technical delay, defect,
+          cancellation/suspension of operation, or system disruption.
+          Availability of the content published on the website may depend on the
+          functions and restrictions of the search system. The Bank shall not be
+          held responsible if certain components of the website are not
+          available to you.
+        </p>
+        <strong>Use of the Website</strong>
+
+        <p>
+          The information published on the website is intended only for personal
+          use by the users. You undertake not to disseminate, transfer or make a
+          copy/reproduce (including in social media) the website structure,
+          image, and design for commercial purposes, without obtaining a prior
+          written approval of the Bank, which is our sole discretion. You are
+          not liable to seek for the bank's prior written approval, if the use
+          of the information/content published on the website is permitted by
+          the Bank's prior consent, or the information is used for personal use
+          for educational or informative purposes.
+        </p>
+        <p>
+          Unauthorized use of the website and the system (including under
+          unknown name and code) is strictly prohibited. Where the registration
+          and the password are required, you are committed to non-disclosure
+          thereof and shall not allow for a third party access to the website
+          except yourself.
+        </p>
+        <p>
+          Any particular page of the website may contain an agreement different
+          from these Rules and Conditions, including in case of collision, these
+          Covenants shall prevail. When using the Bank's website (including its
+          forums), you are prohibited to commit illegal/fraud action, talk with
+          slander and detest, or publish, disseminate/transmit any other
+          undesired information, which may violate the effective legislation and
+          regulations or damage the Bank's business reputation. Apart from this,
+          you are also prohibited to damage the website by any harmful programme
+          („Trojan Horses," „Logic Bomb" or by any other similar actions).
+        </p>
+        <p>
+          It is your sole risk if any programme module (telephone, computer,
+          etc.) used for visiting the website is not streamlined. The Bank shall
+          not be held responsible for relevant consequences if access to the
+          website becomes impossible due to the Bank's technical delay, or due
+          to any other reason beyond the Bank's control.
+        </p>
+        <strong>Intellectual Property</strong>
+        <p>
+          TBC Bank's copyright fully covers the website, its content, structure,
+          and design. Exclusive rights of TBC Bank JSC also apply to any object
+          of copyright created and registered by the Bank, including its own
+          trademarks.
+        </p>
+        <p>
+          The bank's copyright (©) and other intellectual property rights apply
+          to this website and the whole content published thereon (including
+          products and services).
+        </p>
+        <p>
+          Unauthorized use, processing and publishing (including, in social
+          media) of any information/content, including logo, pictogram, graph,
+          photo, image, patent, service marks/trademarks, design, visual media
+          created by the Bank and other intellectual property (whether
+          registered or not) is prohibited without a prior written approval of
+          the Bank. You are not required to seek for the Bank's prior approval,
+          if these data are used for non-commercial, personal purposes and if
+          the law of Georgia or a relevant international regulatory document
+          does not provide for a preliminary approval.
+        </p>
+        <p>
+          Displaying (indicating) the intellectual property on the website does
+          not mean a permit granted to users for the use thereof. User's
+          downloading from the website or making a copy of any information for
+          commercial purposes shall be deemed the breach of the Georgian Law.
+        </p>
+        <p>
+          None of the Covenants included in the Rules and Conditions authorizes
+          you or gives you a permit to use the Bank's intellectual property
+          listed in this provision.
+        </p>
+        <p>
+          If any of the Bank's websites gives the users the opportunity to have
+          a chat, interaction, or dialogue/discussion, you shall be liable to
+          deliver in the mentioned channels only the information with respect to
+          which you have the intellectual property right, or have obtained an
+          approval of a relevant person. In addition, you authorize the Bank to
+          process (including, to publish) the information published by you for
+          legal, communication/informative (including, for the participation in
+          exhibitions, contests) purposes.
+        </p>
+        <p>
+          The Bank's group member companies may use the Bank's trademarks, name,
+          and logotype, representing the Bank's ownership. The blue color is a
+          part of the trademark owned by the Bank, which is registered according
+          to the established rule.
+        </p>
+        <p>
+          Names, trademarks, and logos of the companies published on the Bank's
+          website belong to relevant entities.
+        </p>
+
+        <strong>Confidentiality and Data Protection</strong>
+        <p>
+          TBC Bank JSC shall ensure maximum protection of confidential
+          information delivered to it in compliance with the law of Georgia.
+        </p>
+        <p>
+          The Bank requests customers' personal information as necessary and in
+          the amount necessary for providing efficient service in compliance
+          with the law of Georgia. Customers can request information on
+          processing their personal data at any time.
+        </p>
+        <p>
+          The Bank will only disclose confidential information upon the
+          customer's consent or as prescribed by the law.
+        </p>
+        <p>
+          Whereas the Bank uses its best efforts to protect your privacy and
+          confidentiality of your personal information, given that your data are
+          not encrypted during the remote transfer, the Bank shall not be held
+          accountable for a third party's unauthorized access to the information
+          when it is being transferred to the Bank.
+        </p>
+        <p>
+          Whereas the Bank uses its best efforts to protect your privacy and
+          confidentiality of your personal information, it shall not be held
+          accountable for a third party's unauthorized access to your data when
+          they are being transferred to the Bank (including online platforms
+          used for remote transfer).
+        </p>
+        <p>
+          When sharing confidential information with the Bank, the customer
+          shall not use any automatic functions that may compromise the Bank's
+          security and safety.
+        </p>
+        <p>
+          Your digital footprint generated by your website visits can be used
+          for the Bank's technical operations, for statistical purposes or for
+          the improvement of the quality of the website.
+        </p>
+        <p>
+          If you send your personal information to the Bank's email address to
+          support its efficient administrative performance, the Bank shall not
+          be held responsible for unlawful acquisition of the information by a
+          third party through an unauthorized intervention in the process of
+          information transfer. Neither shall the Bank be responsible for the
+          disclosure of information which a customer has made public or spread
+          through a less secure electronic communication medium.
+        </p>
+        <p>
+          By agreeing to these Rules and Conditions, the Customer confirms that
+          the Bank is authorized to send him/her information (including via
+          email and SMS) about products and services publicized on its website.
+        </p>
+
+        <strong>Links Published on the Website</strong>
+        <p>
+          To furnish you with more information, the Bank is authorized to
+          publish on its website hyperlinks leading to third persons' websites.
+        </p>
+        <p>
+          Websites operated by third persons are not subject to the Bank's
+          control and the Bank shall not be held responsible for the accuracy of
+          their content and product information. Therefore, becoming acquainted
+          with the rules and conditions published on third parties' websites
+          shall be deemed your responsibility.
+        </p>
+
+        <strong>Amendments</strong>
+        <p>
+          The Bank is authorized to make amendments to the present Rules and
+          Conditions without giving prior notice to customers.
+        </p>
+        <p>
+          Customers are obliged to consult the Rules and Conditions regularly.
+          Your visit to the website and/or use of the information provided
+          automatically indicates your consent to these Rules and Conditions.
+        </p>
+
+        <strong>Regulations and Laws </strong>
+        <p>
+          The present Rules and Conditions are subject to the Law of Georgia.
+        </p>
+        <p>
+          In case of disputes, a case will be dealt with by common courts of
+          Georgia in compliance with the law.
+        </p>
+        <p>
+          The voidance of any provision hereunder shall not result in the
+          voidance of other rules and conditions.
+        </p>
+
+        <strong>Contact Information </strong>
+        <p>
+          Should you have any questions regarding the Rules and Conditions and
+          the information published on the website, please sent us a letter at
+          #7 Marjanishvili street, Tbilisi or mail us at
+          <a href="mailto:info@tbcbank.com.ge">info@tbcbank.com.ge.</a>
+        </p>
+      </div>
+    </div>
+  </section>
 
   <section class="privacy-menu">
     <div class="privacy-menu-header-div container-padding">
