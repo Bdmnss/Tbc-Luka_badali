@@ -39,3 +39,34 @@ menuButton.addEventListener("click", function (event) {
     }, 1000);
   }
 });
+
+const contactUsIcon = document.querySelector(".contact-us-icon");
+const contactUsHover = document.querySelector(".contact-us-hover");
+const numberIcon = document.querySelector(".number-icon");
+const numberHover = document.querySelector(".number-hover");
+const locationIcon = document.querySelector(".location-icon");
+const locationHover = document.querySelector(".location-hover");
+
+contactUsIcon.addEventListener("mouseover", () => {
+  contactUsHover.classList.add("show-hover");
+});
+
+contactUsIcon.addEventListener("mouseout", () => {
+  contactUsHover.classList.remove("show-hover");
+});
+
+numberIcon.addEventListener("mouseover", () => {
+  numberHover.classList.add("show-hover");
+});
+
+numberIcon.addEventListener("mouseout", () => {
+  numberHover.classList.remove("show-hover");
+});
+
+locationIcon.addEventListener("mouseover", () => {
+  locationHover.classList.add("show-hover");
+});
+
+locationIcon.addEventListener("mouseout", () => {
+  locationHover.classList.remove("show-hover");
+});

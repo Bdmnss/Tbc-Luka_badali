@@ -370,6 +370,7 @@ main {
 }
 
 .menu-trigger-options-inside-div:hover {
+  transition: background-color 0.5s ease;
   background-color: #007aff;
   fill: white;
 }
@@ -385,6 +386,23 @@ main {
   background-color: #fff;
   padding: 10px 13px;
   border-radius: 50%;
+}
+
+.menu-trigger-hover {
+  display: none;
+  cursor: default;
+  position: absolute;
+  right: 70px;
+  top: 10px;
+  background-color: #424a4d;
+  color: white;
+  font-size: 14px;
+  padding: 8px;
+  border-radius: 7px;
+}
+
+.show-hover {
+  display: block;
 }
 
 .menu-icon {
