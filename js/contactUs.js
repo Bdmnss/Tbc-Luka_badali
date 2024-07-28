@@ -253,7 +253,7 @@ contactUsSubmitButton.addEventListener("click", function (event) {
   setTimeout(() => {
     hideElementWithTransition(contactUsSuccess);
     showElementWithFlexTransition(form);
-  }, 2000);
+  }, 3000);
 });
 
 const contactUsRulesButton = document.querySelector(".contact-us-rules");

@@ -17,7 +17,8 @@ menuButton.addEventListener("click", function (event) {
       closeIcon.classList.add("menu-icon");
       menuOptions.classList.remove("menu-trigger-options-closed-div");
       menuOptions.classList.add("menu-trigger-options-div");
-      menuOptions.style.display = "block";
+      menuOptions.style.display = "flex";
+      menuOptions.style.flexDirection = "column";
       closeIcon.style.opacity = "1";
     }, 500);
   } else {

@@ -4,29 +4,62 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "TBCBold";
+  src: url(fonts/TBCXBold.6db5e61d.woff2);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "TBCMedium";
+  src: url(fonts/TBCXMedium.8ef1248a.woff2);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "TBCRegular";
+  src: url(fonts/TBCXRegular.dee156cc.woff2);
+  font-weight: 400;
+}
+
+body {
+  font-family: "TBCRegular", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "TBCBold", sans-serif;
+}
+
+strong {
+  font-family: "TBCBold", sans-serif;
+}
+
 .scrollbar-margin-container {
-  margin-inline: 10px !important;
   width: 93% !important;
 
   @media only screen and (min-width: 480px) {
-    margin-inline: 40px !important;
-    width: 81% !important;
+    width: 90% !important;
   }
 
   @media only screen and (min-width: 992px) {
-    width: 85% !important;
+    width: 92% !important;
   }
 }
 
 .slider-padding-container {
-  padding-inline: 15px !important;
+  padding-inline: 15px 0 !important;
 
   @media only screen and (min-width: 480px) {
-    padding-inline: 45px !important;
+    padding-inline: 45px 0 !important;
   }
 
   @media only screen and (min-width: 992px) {
-    padding-inline: 47px !important;
+    padding-inline: 47px 0 !important;
   }
 }
 
@@ -53,7 +86,6 @@ header {
   position: sticky;
   height: 80px;
   z-index: 100;
-  overflow: hidden;
   transition: 0.2s;
 }
 
@@ -117,12 +149,12 @@ header {
 .header-tools-div a {
   display: flex;
   align-items: center;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 12px;
   color: #182cc0;
   text-decoration: none;
   gap: 4px;
   transition: color 0.5s ease;
+  font-family: "TBCBold", sans-serif;
 }
 
 /* ********************** */
@@ -233,7 +265,7 @@ header {
 .burger-arrow-div-content a {
   text-decoration: none;
   color: #555f62;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .rules-burger-div {
@@ -248,7 +280,7 @@ header {
   justify-content: space-between;
   margin-bottom: 30px;
   color: #555f62;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .rules-burger-div p {
@@ -296,7 +328,8 @@ main {
   display: flex;
   align-items: center;
   gap: 5px;
-  font-size: 14px;
+  font-size: 12px;
+  font-family: "TBCMedium", sans-serif;
   color: #141719;
   margin-bottom: 40px;
   max-width: 1110px;
@@ -336,6 +369,11 @@ main {
   transition: opacity 0.5s ease;
 }
 
+.menu-trigger-options-inside-div:hover {
+  background-color: #007aff;
+  fill: white;
+}
+
 .menu-trigger-options-closed-div {
   display: none;
   opacity: 0;
@@ -343,6 +381,7 @@ main {
 }
 
 .menu-trigger-options-inside-div {
+  fill: #555f62;
   background-color: #fff;
   padding: 10px 13px;
   border-radius: 50%;
@@ -408,12 +447,11 @@ main {
 }
 
 .hero-data h2 {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 16px;
 }
 
 .hero-data p {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .hero-data button {
@@ -428,8 +466,9 @@ main {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-weight: 600;
   transition: background-color 0.5s ease;
+  font-size: 12px;
+  font-family: "TBCBold", sans-serif;
 }
 
 .hero-data button:hover {
@@ -442,7 +481,8 @@ main {
 
 .subscribe-tbc-text-div {
   color: #141719;
-  font-size: 26px;
+  font-family: "TBCMedium", sans-serif;
+  font-size: 24px;
   margin-bottom: 70px;
 }
 
@@ -458,7 +498,7 @@ main {
 }
 
 .choose-set-div h2 {
-  font-size: 16px;
+  font-size: 14px;
   color: #141719;
 }
 
@@ -505,7 +545,7 @@ main {
 }
 
 .set-image-inside-div h3 {
-  font-size: 18px;
+  font-size: 16px;
   color: white;
   z-index: 2;
 }
@@ -513,6 +553,8 @@ main {
 .set-image-inside-div p {
   display: flex;
   align-items: center;
+  font-size: 12px;
+  font-family: "TBCBold", sans-serif;
   gap: 5px;
   color: white;
   text-decoration: underline;
@@ -548,14 +590,15 @@ main {
 }
 
 .number {
+  font-family: "TBCBold", sans-serif;
   font-size: 36px;
-  font-weight: bold;
   color: #141719;
   margin-bottom: 20px;
 }
 
 .number-text {
-  font-size: 16px;
+  font-size: 14px;
+  font-family: "TBCMedium", sans-serif;
   color: #555f62;
 }
 
@@ -572,14 +615,15 @@ main {
 }
 
 .offers-div h2 {
-  font-size: 16px;
+  font-size: 14px;
   color: #141719;
-  margin-bottom: 20px;
 }
 
 .offers-text-div {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .offers-text-div a {
@@ -589,7 +633,8 @@ main {
   text-decoration: none;
   gap: 10px;
   color: #182cc0;
-  font-size: 16px;
+  font-family: "TBCBold", sans-serif;
+  font-size: 12px;
 }
 
 .offers-text-div a:hover {
@@ -624,12 +669,12 @@ main {
   gap: 15px;
   margin-bottom: 15px;
   color: #6f787b;
-  font-size: 14px;
-  font-weight: 700;
+  font-family: "TBCBold", sans-serif;
+  font-size: 12px;
 }
 
 .offers-inside-text-div h3 {
-  font-size: 16px;
+  font-size: 14px;
   color: #141719;
   line-height: 30px;
 }
@@ -657,6 +702,7 @@ main {
   overflow: hidden !important;
   padding-bottom: 20px !important;
   gap: 15px !important;
+  padding-block-end: 30px !important;
 }
 
 .offers-slide {
@@ -698,7 +744,7 @@ main {
 }
 
 .digital-bank-div h2 {
-  font-size: 16px;
+  font-size: 14px;
   color: #141719;
   margin-bottom: 20px;
 }
@@ -716,7 +762,7 @@ main {
 }
 
 .digital-bank-div p {
-  font-size: 16px;
+  font-size: 14px;
   color: #555f62;
   line-height: 25px;
   margin-bottom: 20px;
@@ -738,7 +784,8 @@ main {
   border: 1px solid #182cc0;
   border-radius: 5px;
   cursor: pointer;
-  font-weight: 600;
+  font-size: 12px;
+  font-family: "TBCBold", sans-serif;
 }
 
 .android-apple-download-div {
@@ -754,7 +801,7 @@ main {
 }
 
 .products-div h2 {
-  font-size: 16px;
+  font-size: 14px;
   color: #141719;
   margin-bottom: 20px;
 }
@@ -781,23 +828,19 @@ main {
 }
 
 .products-text-div h3 {
-  font-size: 16px;
+  font-size: 14px;
   color: #141719;
   margin-bottom: 10px;
 }
 
 .products-text-div p {
-  font-size: 14px;
+  font-size: 12px;
   color: #555f62;
   line-height: 25px;
 }
 
-.products-text-div p > span {
-  font-weight: bold;
-}
-
 .products-slider {
-  height: 400px;
+  height: 370px;
   display: flex !important;
   overflow: hidden !important;
   padding-block: 0 20px !important;
@@ -838,7 +881,7 @@ main {
 
 .reward-div h2 {
   padding: 0 15px;
-  font-size: 16px;
+  font-size: 14px;
   color: #141719;
   margin-bottom: 20px;
 }
@@ -849,18 +892,18 @@ main {
 
 .reward-slide img {
   height: 55px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .reward-slide h3 {
-  font-size: 16px;
+  font-size: 14px;
   color: #141719;
   margin-bottom: 20px;
   line-height: 35px;
 }
 
 .reward-slide p {
-  font-size: 16px;
+  font-size: 14px;
   color: #555f62;
 }
 .reward-swiper {
@@ -911,6 +954,7 @@ footer {
 }
 
 .language-div {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -924,6 +968,9 @@ footer {
   padding: 5px 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  color: #555f62;
+  font-size: 14px;
+  font-family: "TBCBold", sans-serif;
 }
 
 .language-div > div:nth-child(1):hover {
@@ -931,10 +978,19 @@ footer {
 }
 
 .language-div > div:last-child {
-  display: none;
+  cursor: pointer;
+  background-color: white;
+  position: absolute;
+  top: 100%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  padding: 15px 20px;
-  font-weight: bold;
+  padding: 13px 15px;
+  color: #141719;
+  font-size: 14px;
+  font-family: "TBCMedium", sans-serif;
+}
+
+.eng-button.hidden {
+  display: none;
 }
 
 .footer-arrow-div {
@@ -943,7 +999,7 @@ footer {
 }
 
 .footer-arrow-div h3 {
-  font-size: 18px;
+  font-size: 16px;
   color: #141719;
 }
 
@@ -967,7 +1023,7 @@ footer {
 .footer-arrow-div-content a {
   text-decoration: none;
   color: #555f62;
-  font-size: 16px;
+  font-size: 14px;
   margin-top: 20px;
   transition: color 0.5s ease;
 }
@@ -999,7 +1055,7 @@ footer {
 }
 
 .contact-div h3 {
-  font-size: 18px;
+  font-size: 16px;
   color: #141719;
 }
 
@@ -1008,9 +1064,9 @@ footer {
   align-items: center;
   text-decoration: none;
   gap: 10px;
-  font-size: 16px;
+  font-family: "TBCMedium", sans-serif;
+  font-size: 14px;
   color: #555f62;
-  font-weight: bold;
 }
 
 .contact-div a:hover {
@@ -1023,7 +1079,7 @@ footer {
 }
 
 .social-networks-div h3 {
-  font-size: 18px;
+  font-size: 16px;
   color: #141719;
   margin-bottom: 20px;
 }
@@ -1066,7 +1122,7 @@ footer {
 }
 
 .rules-text-div p {
-  font-size: 16px;
+  font-size: 14px;
   color: #555f62;
   cursor: pointer;
   transition: color 0.5s ease;
@@ -1080,7 +1136,7 @@ footer {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 16px;
+  font-size: 14px;
   color: #6f787b;
 }
 
@@ -1114,7 +1170,7 @@ footer {
 }
 
 .privacy-menu-header-div h2 {
-  font-size: 16px;
+  font-size: 14px;
   color: #141719;
 }
 
@@ -1166,13 +1222,12 @@ footer {
 }
 
 .scrollable-content h4 {
-  font-weight: bold;
   color: #555f62;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .scrollable-content p {
-  font-size: 16px;
+  font-size: 14px;
   color: #555f62;
   line-height: 25px;
 }
@@ -1199,11 +1254,8 @@ th,
 td {
   border: 1px solid #555f62;
   text-align: left;
-  font-size: 16px;
+  font-size: 14px;
   color: #555f62;
-}
-th {
-  font-weight: bold;
 }
 
 .last-privacy-text {
@@ -1240,7 +1292,7 @@ th {
 }
 
 .rules-menu-header-div h2 {
-  font-size: 16px;
+  font-size: 14px;
   color: #141719;
 }
 
@@ -1253,12 +1305,12 @@ th {
 }
 
 .rules-menu-text-div h3 {
-  font-size: 18px;
+  font-size: 16px;
   color: #141719;
   margin-bottom: 20px;
 }
 .rules-menu-text-div p {
-  font-size: 16px;
+  font-size: 14px;
   color: #555f62;
   line-height: 25px;
   margin-bottom: 20px;
@@ -1307,8 +1359,8 @@ th {
   cursor: pointer;
   gap: 10px;
   color: #182cc0;
-  font-size: 14px;
-  font-weight: bold;
+  font-family: "TBCBold", sans-serif;
+  font-size: 12px;
 }
 
 .cookies-accept-button:hover {
@@ -1341,7 +1393,7 @@ th {
 }
 
 .contact-us-header h2 {
-  font-size: 16px;
+  font-size: 14px;
   color: #141719;
 }
 
@@ -1364,10 +1416,12 @@ form {
   display: flex;
   flex-direction: column;
   padding-block: 30px;
+  max-height: calc(100% - 230px);
+  overflow-y: scroll;
 }
 
 .contact-us-text {
-  font-size: 16px;
+  font-size: 14px;
   color: #555f62;
   margin-bottom: 20px;
 }
@@ -1389,7 +1443,7 @@ form {
   border: 1px solid #d8d8d8;
   background-color: #f9fafa;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 14px;
   color: #141719;
 }
 
@@ -1408,9 +1462,8 @@ form {
   position: absolute;
   top: 16px;
   left: 12px;
-  font-size: 16px;
+  font-size: 14px;
   color: #6f787b;
-  font-weight: 400;
   transition: all 0.3s ease;
 }
 
@@ -1420,7 +1473,7 @@ form {
   padding: 22px 12px 8px;
   border: 1px solid #d8d8d8;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 14px;
   color: #141719;
   background-color: #f9fafa;
 }
@@ -1439,7 +1492,7 @@ label span {
 
 .error-text {
   color: red;
-  font-size: 14px;
+  font-size: 12px;
   margin-top: 5px;
 }
 
@@ -1457,22 +1510,23 @@ label span {
 
 .checkbox-div label {
   cursor: pointer;
-  font-size: 14px;
+  font-size: 12px;
   color: #555f62;
 }
 
 .contact-us-rules {
   cursor: pointer;
-  font-size: 14px;
+  font-size: 12px;
   color: #141719;
 }
 
 .contact-us-button-div {
   position: fixed;
   bottom: 0;
-  background-color: #f9fafa;
+  background-color: white;
   width: 100%;
   padding-block: 32px;
+  border-top: 1px solid #d8d8d8;
 }
 
 .contact-us-button {
@@ -1522,12 +1576,12 @@ input::-webkit-inner-spin-button {
 }
 
 .success-div h2 {
-  font-size: 16px;
+  font-size: 14px;
   color: #141719;
 }
 
 .success-div p {
-  font-size: 16px;
+  font-size: 14px;
   color: #555f62;
 }
 
@@ -1544,7 +1598,7 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
   display: flex;
   align-items: center;
-  font-size: 14px;
+  font-size: 12px;
   color: #141719;
   margin-bottom: 50px;
 }
@@ -1555,18 +1609,18 @@ input::-webkit-inner-spin-button {
 }
 
 .contact-us-terms-and-conditions-div h3 {
-  font-size: 16px;
+  font-size: 14px;
   color: #141719;
   margin-bottom: 50px;
 }
 
 .contact-us-terms-and-conditions-div strong {
-  font-size: 18px;
+  font-size: 16px;
   color: #141719;
 }
 
 .contact-us-terms-and-conditions-div p {
-  font-size: 16px;
+  font-size: 14px;
   color: #555f62;
   line-height: 25px;
   margin-bottom: 20px;
@@ -1574,14 +1628,14 @@ input::-webkit-inner-spin-button {
 
 .contact-us-terms-and-conditions-div p a {
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
   color: #555f62;
   line-height: 25px;
 }
 
 @media only screen and (min-width: 480px) {
   .header-tools-div a {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .burger-arrow-div {
@@ -1605,8 +1659,7 @@ input::-webkit-inner-spin-button {
   }
 
   .hero-data h2 {
-    font-size: 26px;
-    font-weight: bold;
+    font-size: 24px;
   }
 
   .hero-image {
@@ -1619,11 +1672,11 @@ input::-webkit-inner-spin-button {
   }
 
   .subscribe-tbc-text-div {
-    font-size: 30px;
+    font-size: 28px;
   }
 
   .choose-set-div h2 {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .number-div {
@@ -1635,12 +1688,12 @@ input::-webkit-inner-spin-button {
   }
 
   .number {
-    font-size: 46px;
+    font-size: 44px;
     margin-bottom: 20px;
   }
 
   .number-text {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .mobile-image-div img {
@@ -1656,15 +1709,15 @@ input::-webkit-inner-spin-button {
   }
 
   .offers-div h2 {
-    font-size: 26px;
-  }
-
-  .offers-div a {
-    font-weight: bold;
+    font-size: 24px;
   }
 
   .offers-slider {
-    height: 400px;
+    height: 370px;
+  }
+
+  .offers-text-div a {
+    font-size: 14px;
   }
 
   .digital-bank-div {
@@ -1672,11 +1725,11 @@ input::-webkit-inner-spin-button {
   }
 
   .digital-bank-div h2 {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .products-div h2 {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .products-slider {
@@ -1685,7 +1738,7 @@ input::-webkit-inner-spin-button {
 
   .reward-div h2 {
     padding: 0 45px;
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .rewards-slider {
@@ -1709,7 +1762,11 @@ input::-webkit-inner-spin-button {
   }
 
   .footer-arrow-div h3 {
-    font-size: 26px;
+    font-size: 24px;
+  }
+
+  .footer-arrow-div-content a {
+    font-size: 16px;
   }
 
   .contact-div {
@@ -1717,7 +1774,7 @@ input::-webkit-inner-spin-button {
   }
 
   .contact-div h3 {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .social-networks-div {
@@ -1725,7 +1782,7 @@ input::-webkit-inner-spin-button {
   }
 
   .social-networks-div h3 {
-    font-size: 26px;
+    font-size: 24px;
   }
   .rules-div {
     padding-block: 32px;
@@ -1741,7 +1798,7 @@ input::-webkit-inner-spin-button {
   }
 
   .privacy-menu-header-div h2 {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .privacy-menu-close-div {
@@ -1765,7 +1822,7 @@ input::-webkit-inner-spin-button {
   }
 
   .rules-menu-header-div h2 {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .rules-menu-text-div {
@@ -1781,7 +1838,7 @@ input::-webkit-inner-spin-button {
   }
 
   .contact-us-header h2 {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .contact-us-header div {
@@ -1811,6 +1868,14 @@ input::-webkit-inner-spin-button {
 }
 
 @media only screen and (min-width: 768px) {
+  .subscribe-tbc-text-div {
+    font-size: 32px;
+  }
+
+  .offers-slider {
+    height: 400px;
+  }
+
   .footer-arrow-div {
     border: none;
   }
@@ -1870,12 +1935,11 @@ input::-webkit-inner-spin-button {
   }
 
   .hero-data h2 {
-    font-size: 26px;
-    font-weight: bold;
+    font-size: 24px;
   }
 
   .hero-data p {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .hero-data button {
@@ -1913,7 +1977,7 @@ input::-webkit-inner-spin-button {
   }
 
   .set-image-inside-div h3 {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .offers-slide {
@@ -1931,11 +1995,11 @@ input::-webkit-inner-spin-button {
   }
 
   .offers-inside-text-div div {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .offers-inside-text-div h3 {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .digital-bank-div {
@@ -1963,7 +2027,7 @@ input::-webkit-inner-spin-button {
 
   .mobile-text-div h2 {
     display: block;
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .download-button {
@@ -1975,11 +2039,11 @@ input::-webkit-inner-spin-button {
   }
 
   .products-text-div h3 {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .products-text-div p {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .products-slide {
@@ -1992,7 +2056,7 @@ input::-webkit-inner-spin-button {
   }
 
   .rewards-slide h3 {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .footer-links-div {
@@ -2022,15 +2086,15 @@ input::-webkit-inner-spin-button {
   }
 
   .footer-arrow-div h3 {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .contact-div h3 {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .social-networks-div h3 {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .footer-arrow-div {
@@ -2056,7 +2120,7 @@ input::-webkit-inner-spin-button {
   }
 
   .rules-div p {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .rules-text-div {
@@ -2066,7 +2130,7 @@ input::-webkit-inner-spin-button {
   }
 
   .rules-text-div p {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .footer-mobile-tbc-logo {
@@ -2085,8 +2149,12 @@ input::-webkit-inner-spin-button {
     width: 600px;
   }
 
+  .success-div h2 {
+    font-size: 24px;
+  }
+
   .contact-us-terms-and-conditions-div strong {
-    font-size: 26px;
+    font-size: 24px;
   }
 }
 
@@ -2130,11 +2198,12 @@ input::-webkit-inner-spin-button {
     display: flex;
     align-items: center;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
     color: #222222;
   }
 
   .desktop-header-menu-nav {
+    font-family: "TBCMedium", sans-serif;
     display: flex;
     gap: 12px;
   }
@@ -2145,7 +2214,7 @@ input::-webkit-inner-spin-button {
   }
 
   .desktop-header-menu-nav div > a {
-    font-size: 16px;
+    font-size: 12px;
     color: #141719;
   }
 
@@ -2185,9 +2254,9 @@ input::-webkit-inner-spin-button {
   }
 
   .desktop-menu-digital-bank-text p {
-    font-size: 16px;
+    font-size: 12px;
     color: #182cc0;
-    font-weight: bold;
+    font-family: "TBCBold", sans-serif;
   }
 
   .desktop-menu-digital-bank-text:hover svg {
@@ -2344,7 +2413,7 @@ input::-webkit-inner-spin-button {
     display: flex;
     position: absolute;
     bottom: -3px;
-    right: 40px;
+    right: 0px;
   }
 
   .swiper-container {
